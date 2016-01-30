@@ -18,6 +18,27 @@ app.use express.static "./public"
 app.get '/', (req, res)->
     res.render 'index'
 
+app.get '/overview', (req, res)->
+    res.render 'overview'
+
+app.get '/team', (req, res)->
+    res.render 'team'
+
+app.get '/jobs', (req, res)->
+    res.render 'jobs'
+
+app.get '/services', (req, res)->
+    res.render 'services'
+
+app.get '/news', (req, res)->
+    res.render 'news'
+
+app.get '/oath', (req, res)->
+    res.render 'oath'
+
+app.get '/contact', (req, res)->
+    res.render 'contact'
+
     ##handles 404 pages. make sure its the last one
 app.get '*', (req, res)->
     res.render '404'

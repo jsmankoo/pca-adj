@@ -35,13 +35,10 @@ html.no-js
 
     //css
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
 
     //page's CSS
     block style
-
-    //localscripts
-    script
-      :coffee-script
 
     //scripts
     script(type="text/javascript" src='https://use.typekit.net/ytc2ntr.js')
@@ -52,6 +49,29 @@ html.no-js
     | <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgra    de your browser</a> to improve your experience.</p>
     | <![endif]-->
 
+    //Navbar goes here
+    nav.navbar.navbar-default.navbar-fixed-top
+        .container
+            .row#navClientButtons
+                ul.pull-right
+                    li: button.btn.btn-default(href='#')
+                        i.fa.fa-paper-plane.fa-lg
+                        | CLAIMS FORM
+                    li: button.btn.btn-default(href='#')
+                        i.fa.fa-lock.fa-lg
+                        | CLIENT LOGIN
+            .row#navMain
+                .navbar-header
+                    button#navToggle.navbar-toggle(type='button' data-toggle='collapse' data-target='#mobileNavbar')
+                        i.fa.fa-bars.fa-2x
+                    a.navbar-brand(href='/')
+                        // img added via jquery
+                .collapse.navbar-collapse#mobileNavbar.pull-right
+                    //ul and li added via jquery
+
+
+
+
     //this gets replaced by page content
     block content
 
@@ -60,6 +80,26 @@ html.no-js
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+    //localscripts
+    script
+      :coffee-script
+        #navbar page id = 26
+        $.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/26', (json)->
+            #brandImage added
+            brandImageUrl = json.acf.headImage
+            brandImageWraper = $('.navbar-brand').append $("<img src='#{brandImageUrl}'>")
+
+            #navbar added
+            content = $(json.content.rendered)
+            section = $('#mobileNavbar')
+            section.append content
+
+            #adding classes to navbar
+            $('#mobileNavbar ul').addClass 'nav navbar-nav'
+            $('#mobileNavbar ul li ul').removeClass('nav navbar-nav').addClass()
+
+
 
     block script
     

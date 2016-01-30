@@ -1,0 +1,112 @@
+@import './variables.styl'
+@import 'nib'
+@import 'rupture'
+
+nav.navbar.navbar-default.navbar-fixed-top
+	background transparent
+	absolute top 0px
+	border-bottom-width 5px
+	border-color #CBDAF1
+
+	#navMain
+		.navbar-nav
+			li a
+				font-size 16px
+				font-weight: 700
+				color blue
+				&:hover
+				&:focus
+					color black
+	
+	+below(768px)
+		size 100% 90px
+		margin-bottom 0px
+		#navClientButtons
+			display none
+		#navMain
+			margin-top 10px
+			.navbar-header
+				.navbar-brand
+					margin-top -5px
+					img
+						size auto 45px
+				button
+					background transparent
+					border none
+			#mobileNavbar
+				size 100% auto
+				.navbar-nav
+					background blue
+					margin-top 0px
+					li a
+						padding-left 30px
+						padding-right 30px
+						color white
+					.open
+						a
+						a:hover
+						a:focus
+							background transparent
+						
+					.dropdown
+						.dropdown-menu
+							background-color blue
+							a
+								color white
+								&:hover
+								&:focus
+									color black
+	+above(768px)
+		size 100% 128px
+		//dropdown on hover
+		.dropdown:hover .dropdown-menu
+			display block
+		#navClientButtons
+			display block
+			background transparent
+			ul
+				list-style-type none
+				li
+					display inline
+					margin 0px 10px 0px 0px
+					button
+						font-size 12px
+						font-weight 700
+						size 160px 30px
+						background-color blue
+						color white
+						border none
+						border-radius 0px
+						padding 6px 0px
+						&:hover
+						&:focus
+							background-color black
+						i.fa
+							padding-right 17px
+		#navMain
+			.navbar-header
+				.navbar-brand
+					margin-top -20px
+					img		
+						size 285px 60px
+			.navbar-nav
+				margin-top 10px
+				.open
+					a
+					a:hover
+					a:focus
+						background transparent
+					
+				.dropdown
+					a.dropdown-toggle
+						padding-bottom 42px
+					.dropdown-menu
+						size 225px auto
+						background-color blue
+						a
+							color white
+							&:hover
+							&:focus
+								color black
+						
+		

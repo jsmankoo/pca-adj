@@ -26,12 +26,40 @@
     return res.render('index');
   });
 
+  app.get('/overview', function(req, res) {
+    return res.render('overview');
+  });
+
+  app.get('/team', function(req, res) {
+    return res.render('team');
+  });
+
+  app.get('/jobs', function(req, res) {
+    return res.render('jobs');
+  });
+
+  app.get('/services', function(req, res) {
+    return res.render('services');
+  });
+
+  app.get('/news', function(req, res) {
+    return res.render('news');
+  });
+
+  app.get('/oath', function(req, res) {
+    return res.render('oath');
+  });
+
+  app.get('/contact', function(req, res) {
+    return res.render('contact');
+  });
+
   app.get('*', function(req, res) {
     return res.render('404');
   });
 
   app.listen(app.get('port'), function() {
-    return console.log("HKLane started on port: " + (app.get('port')));
+    return console.log("PCA started on port: " + (app.get('port')));
   });
 
 }).call(this);

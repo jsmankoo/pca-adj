@@ -21,6 +21,8 @@ nav.navbar.navbar-default.navbar-fixed-top
 	+below(768px)
 		size 100% 90px
 		margin-bottom 0px
+		
+
 		#navClientButtons
 			display none
 		#navMain
@@ -39,9 +41,10 @@ nav.navbar.navbar-default.navbar-fixed-top
 					background blue
 					margin-top 0px
 					li a
-						padding-left 30px
-						padding-right 30px
+						margin auto 10%
 						color white
+						i.fa
+							float right
 					.open
 						a
 						a:hover
@@ -50,11 +53,18 @@ nav.navbar.navbar-default.navbar-fixed-top
 						
 					.dropdown
 						.dropdown-menu
+							padding 0px
+							margin auto 10%
+							border-radius 0px
+							border-top 1px solid white
+							border-bottom 1px solid white
 							background-color blue
 							a
 								color white
+								margin auto 0px
 								&:hover
 								&:focus
+									background-color white
 									color black
 	+above(768px)
 		size 100% 128px

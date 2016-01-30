@@ -1,0 +1,4 @@
+
+> pca2015@1.0.0 CCoffee /home/jsmankoo/Projects/PCA2015
+> coffee -c -o ./dist/index.js ./src/index.coffee
+

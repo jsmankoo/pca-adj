@@ -1,0 +1,36 @@
+{
+  "name": "pca2015",
+  "version": "1.0.0",
+  "description": "PCA-ADJ website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "CCoffee": "coffee -c -o ./dist/index.js ./src/index.coffee",
+    "CCoffeeW": "coffee -c -o ./dist/index.js -w ./src/index.coffee",
+    "CStylus": "stylus -u nib -u rupture ./src/stylus -o ./public/css",
+    "CStylusW": "stylus -u nib -u rupture -w ./src/stylus -o ./public/css",
+    "CStart": "((npm run CCoffee > coffee.log &); npm run CStylus > stylus.log &); node ./dist/index.js",
+    "CDev": "((npm run CCoffeeW > coffeeW.log &); npm run CStylusW > stylusW.log &); nodemon ./dist/index.js",
+    "dev":"nodemon ./dist/index.js",
+    "start":"node ./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jsmankoo@bitbucket.org/jsmankoo/pca2015.git"
+  },
+  "author": "Jai S. Mankoo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jsmankoo/pca2015#readme",
+  "dependencies": {
+    "coffee-script": "^1.10.0",
+    "express": "^4.13.4",
+    "forever": "^0.15.1",
+    "jade": "^1.11.0",
+    "jstransformer-coffee-script": "^1.0.0",
+    "morgan": "^1.6.1",
+    "nib": "^1.1.0",
+    "nodemon": "^1.8.1",
+    "rupture": "^0.6.1",
+    "stylus": "^0.53.0"
+  }
+}

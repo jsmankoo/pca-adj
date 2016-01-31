@@ -3,10 +3,11 @@
 @import 'rupture'
 
 nav.navbar.navbar-default.navbar-fixed-top
-	background transparent
+	background white
 	absolute top 0px
 	border-bottom-width 5px
 	border-color #CBDAF1
+	opacity 0.8
 
 	#navMain
 		.navbar-nav
@@ -18,10 +19,10 @@ nav.navbar.navbar-default.navbar-fixed-top
 				&:focus
 					color black
 	
-	+below(768px)
+	+below(769px)
 		size 100% 90px
 		margin-bottom 0px
-		
+		opacity 1
 
 		#navClientButtons
 			display none
@@ -36,10 +37,12 @@ nav.navbar.navbar-default.navbar-fixed-top
 					background transparent
 					border none
 			#mobileNavbar
+				border none
 				size 100% auto
 				.navbar-nav
+					margin-top 17px
+					margin-bottom 0px
 					background blue
-					margin-top 0px
 					li a
 						margin auto 10%
 						color white
@@ -66,7 +69,7 @@ nav.navbar.navbar-default.navbar-fixed-top
 								&:focus
 									background-color white
 									color black
-	+above(768px)
+	+above(769px)
 		size 100% 128px
 		//dropdown on hover
 		.dropdown:hover .dropdown-menu
@@ -79,7 +82,7 @@ nav.navbar.navbar-default.navbar-fixed-top
 				li
 					display inline
 					margin 0px 10px 0px 0px
-					button
+					a
 						font-size 12px
 						font-weight 700
 						size 160px 30px

@@ -2,6 +2,153 @@ extends ./layout.jade
 
 block style
 	link(rel="stylesheet" href="/css/index.css")
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css")
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css")
 
 block content
-	h1	HI
+	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
+		.owl-carousel.owl-theme#slideShow
+			//slide Show goes here
+		#headings
+			.conainter
+				.row: .col-md-12
+					h1.heading.text-center {{json.acf.headline}}
+				.row: .col-md-12
+					p.sub-heading.text-center {{json.acf.subheadline}}
+				.row: .col-md-12
+					a.btn.btn-default#ourTeam(href='/team') MEET OUR TEAM
+
+		#amLogo
+			img(ng-src="{{json.acf.headImage}}")
+		#midHeading
+			#content(ng-bind-html='htmlContent')
+			a#more(href='/overview') MORE
+		#midSection
+			.container
+				.row
+					.col-md-4
+						.thumbnail
+							a(href='/team'): img#image(ng-src='{{json.acf.imageLeft}}')
+							a(href='/team'): h2.heading.text-center {{json.acf.titleLeft}}
+							p.text-center.paragraph {{json.acf.paragraphLeft}}
+					.col-md-4
+						.thumbnail
+							a(href='/team'): img#image(ng-src='{{json.acf.imageMid}}')
+							a(href='/team'): h2.heading.text-center {{json.acf.titleMid}}
+							p.text-center.paragraph {{json.acf.paragraphMid}}
+					.col-md-4
+						.thumbnail
+							a(href='/team'): img#image(ng-src='{{json.acf.imageRight}}')
+							a(href='/team'): h2.heading.text-center {{json.acf.titleRight}}
+							p.text-center.paragraph {{json.acf.paragraphRight}}
+		#services(ng-controller='servicesCtrl')
+			.container
+				.row
+					h1.heading.text-center Our Services
+				.row
+					.col-md-4(ng-repeat='service in beforeCollapse')
+						.service
+							img.image(ng-src='{{service.image}}')
+							h2.sub-heading {{service.subHeading}}
+							.onHover: p.
+								<div class='sub-heading'>{{service.subHeading}}</div><br>
+								{{service.paragraph}}
+
+				.row#restOfServices.collapse
+					.col-md-4(ng-repeat='service in afterCollapse')
+						.service
+							img.image(ng-src='{{service.image}}')
+							h2.sub-heading {{service.subHeading}}
+							.onHover: p.
+								<div class='sub-heading'>{{service.subHeading}}</div><br>
+								{{service.paragraph}}
+
+				.row
+					.col-md-12
+						button.btn(data-toggle='collapse' data-target='#restOfServices') MORE SERVICES
+
+
+
+block script
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')
+	script
+		:coffee-script
+			##load slideShow
+			app = angular.module 'pcaApp', ['ngSanitize']
+			app.controller 'ctrl', ($scope, $http)->
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/22'
+					.then (json)->
+						$scope.json = json.data
+						$scope.htmlContent = json.data.content.rendered
+
+			## load all services
+			app.controller 'servicesCtrl', ($scope, $http)->
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/service'
+					.then (json)->
+						$scope.allServices = ( i.acf for i in json.data)
+						$scope.beforeCollapse = $scope.allServices[0..2]
+						$scope.afterCollapse = $scope.allServices[3..]
+
+			$.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->
+				slideShow = $('#slideShow')
+				images = (img.acf.image for img in json)
+				for img in images
+					slideShow.append $("<div class='item'><img src='#{img}'></div>")
+
+				##cropSLides
+				wid = $(window).width()
+				ratio = 1600/840
+				height = wid/ratio
+				
+				if wid > 1600
+					$('#slideShow .item img').css {
+						"height": "#{height}"
+						"width": "#{wid}"
+						"margin": " #{(840 - height)/2}px 0px 0px 0px"
+					}
+				else if wid > 768 and wid <= 1600
+					$('#slideShow .item img').css {
+						"height": "840px"
+						"width": "1600px"
+						"margin": "0px 0px 0px #{(wid - 1600)/2}px"
+					}
+				else if wid <= 768
+					$('#slideShow .item img').css {
+						"height": "420px"
+						"width": "800px"
+						"margin": "0px 0px 0px #{(wid - 800)/2}px"
+					}
+
+				##init owlCarousel
+				slideShow.owlCarousel {
+					navigation: false
+					slideSpeed: 300
+					autoPlay: 3500
+					pagination: false
+					singleItem: true
+				}
+
+			##crop Slides upon resize
+			$(window).resize ()->
+				wid = $(window).width()
+				ratio = 1600/840
+				height = wid/ratio
+				
+				if wid > 1600
+					$('#slideShow .item img').css {
+						"height": "#{height}"
+						"width": "#{wid}"
+						"margin": " #{(840 - height)/2}px 0px 0px 0px"
+					}
+				else if wid > 768 and wid <= 1600
+					$('#slideShow .item img').css {
+						"height": "840px"
+						"width": "1600px"
+						"margin": "0px 0px 0px #{(wid - 1600)/2}px"
+					}
+				else if wid <= 768
+					$('#slideShow .item img').css {
+						"height": "420px"
+						"width": "800px"
+						"margin": "0px 0px 0px #{(wid - 800)/2}px"
+					}

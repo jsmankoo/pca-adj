@@ -1,15 +1,25 @@
 @import './variables.styl'
 @import './navbar.styl'
+@import './footer.styl'
 @import 'nib'
 @import 'rupture'
 
 html body
 	font-family font
-	.collapsing
-		transition height 0.6s
-	+above(768px)
+	a
+		text-decoration none
+		font-weight 700
+		&:hover
+		&:focus
+		&:active
+			text-decoration none
+		img:hover
+		img:focus
+			opacity 0.8
+
+	+above(769px)
 		.mobile-only
 			display none
-	+below(768px)
+	+below(769px)
 		.mobile-only
 			display block

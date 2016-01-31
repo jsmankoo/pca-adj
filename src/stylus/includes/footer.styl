@@ -1,0 +1,93 @@
+@import './variables.styl'
+@import 'nib'
+@import 'rupture'
+
+footer
+	border-top 5px solid #D5E1F1
+	background-color #F3F6FB
+	#footerClientButtons
+		display block
+		background transparent
+		a
+			font-size 12px
+			font-weight 700
+			size 160px 30px
+			background-color blue
+			color white
+			border none
+			border-radius 0px
+			padding 6px 0px
+			&:hover
+			&:focus
+				background-color black
+			i.fa
+				padding-right 17px
+	#footerLinks ul
+		font-weight: 700
+		display block
+		margin auto
+		list-style-type none
+		li
+			display inline
+	#footerLogo img
+		display block
+		margin auto
+	#copyWrite
+		color light-grey
+		text-align center
+	.siteBy
+		color light-grey
+		text-align: center
+		margin 20px auto
+	
+	+below(769px)
+		#footerClientButtons
+			#form a
+				display block
+				margin 0px auto 25px
+			#login a
+				display block
+				margin 0px auto
+		#footerLinks
+			ul
+				padding 0px
+				margin 45px auto
+				text-align center
+				li
+					display block
+					margin 10px auto
+					a
+						text-decoration none
+						&:hover
+						&:focus
+							color black
+		#footerLogo img
+			size auto 35px
+			margin 45px auto 30px
+		#copyWrite
+			margin 0px auto 15px
+	+above(769px)
+		#footerClientButtons
+			display block
+			margin -20px auto 0px
+			#form a
+				float right
+			#login a
+				float left
+		#footerLinks
+			ul
+				margin 45px auto
+				text-align center
+				li
+					display inline
+					a
+						text-decoration none
+						padding 5px 20px
+						&:hover
+						&:focus
+							color black
+		#footerLogo img
+			size auto 40px
+			margin 35px auto
+		#copyWrite
+			margin 0px auto 25px

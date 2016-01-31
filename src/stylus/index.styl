@@ -5,3 +5,226 @@
 
 html body
 	color black
+	#slideShow
+		//Very important
+		z-index -1
+		.item
+			overflow hidden
+			display block
+	#headings
+		size 100% auto
+		color white
+		.heading
+		.sub-heading
+			text-align center
+			display block
+			margin auto
+		#ourTeam
+			text-align center
+			display block
+			margin auto
+			background-color white
+			color blue
+			border none
+			border-radius 0px
+			font-weight: 700
+			opacity 0.9
+			size 160px 30px
+			&:hover
+			&:focus
+				background-color blue
+				color white
+				
+	#amLogo
+		img
+			display block
+			margin -80px auto auto
+			size 161px 161px
+	
+	#midHeading
+		h1
+			font-weight: 700
+			text-align: center
+		a
+			display block
+			margin auto
+			text-align: center
+	#midSection
+		background-color #F3F6FB
+		border-top 5px solid #CBDAF1
+		border-bottom 5px solid #CBDAF1
+		.thumbnail
+			border none
+			background transparent
+	#services
+		.heading
+			text-align: center
+			font-size 30px
+			font-weight: 700
+			color blue
+		.service
+			size 360px 360px
+			background-color transparent
+			color white
+			relative 0px 0px
+			display: table
+			margin 0px auto 60px
+			opacity 1
+			img
+				position absolute
+				z-index -9999
+				size 360px 360px
+			h2
+				display table-cell
+				vertical-align middle
+				text-align: center
+			.sub-heading
+				line-height 28px
+				padding 0px 20px
+				margin 0px 20px
+				font-size 25px
+				text-transform: uppercase
+				font-weight: 900
+			.onHover
+				line-height 25px
+				font-size 16px
+				font-weight: 500
+				padding 0px 40px
+				display none
+				vertical-align middle
+				text-align: center
+			&:hover
+			&:focus
+				background-color rgba(44,100,178, 0.7)
+				h2
+					display none
+				.onHover
+					display table-cell
+			
+			
+		button
+			display block
+			margin auto
+			size 160px 30px
+			background-color blue
+			color white
+			border none
+			border-radius 0px
+			text-align center
+			&:hover
+				background-color white
+				color blue
+
+	+below(769px)
+		#slideShow
+			margin-top 90px
+			.item
+				size 100% 420px
+				img
+					size auto 420px
+		#headings
+			absolute top 250px
+			font-weight: 700
+			.heading
+				font-weight: 900
+				font-size 36px
+				margin-bottom 25px
+			.sub-heading
+				display none
+		#amLogo
+			img
+				display block
+				margin -61px auto auto
+				size 132px 132px
+		#midHeading
+			h1
+				margin 20px 10% 30px
+				line-height 32px
+				font-size 18px
+			a
+				margin 0px auto 45px
+		#midSection
+			padding-top 45px
+			padding-bottom 15px
+			#image
+				size 200px 200px
+			.heading
+				font-size 24px
+				font-weight: 700
+				margin 40px auto 25px
+			.paragraph
+				font-size: 16px
+				color grey
+				padding 0px
+				margin 0px 20px 10px
+				line-height 30px
+		#services
+			.col-md-4
+				padding 0px
+			.heading
+				margin 47px auto
+				font-size 40px
+			.service
+				size 297px 297px
+				background-color rgba(44,100,178, 0.7)
+				margin 0px auto 20px
+				img 
+					size 297px 297px
+				h2
+					display none
+				.sub-heading
+					line-height 20px
+					font-size 20px
+				.onHover
+					line-height 20px
+					font-size 16px
+					padding 0px 20px
+					display table-cell
+				
+			button
+				margin-top 15px
+				margin-bottom 47px
+	+above(769px)
+		#slideShow
+			.item
+				size 100% 840px
+				img
+					size auto 840px
+		#headings
+			absolute top 380px
+			font-weight: 700
+			.heading
+				font-weight: 900
+				font-size 60px
+			.sub-heading
+				margin 20px 25% 32px
+				line-height 30px
+				font-size 20px
+		#midHeading
+			h1
+				margin 20px 25% 30px
+				line-height 38px
+				font-size 20px
+			a
+				margin 0px auto 45px
+		#midSection
+			padding-top 45px
+			padding-bottom 15px
+			#image
+				size 268px 268px
+			.heading
+				font-size 24px
+				font-weight: 700
+				margin 45px auto 30px
+			.paragraph
+				font-size: 16px
+				color grey
+				padding 0px
+				margin 0px 20px
+				line-height 30px
+		#services
+			.heading
+				margin 95px auto
+				font-size 60px
+			button
+				margin-bottom 82px

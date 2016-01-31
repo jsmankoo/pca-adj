@@ -73,7 +73,7 @@ block script
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')
 	script
 		:coffee-script
-			##load slideShow
+			##load midSection
 			app = angular.module 'pcaApp', ['ngSanitize']
 			app.controller 'ctrl', ($scope, $http)->
 				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/22'
@@ -89,6 +89,7 @@ block script
 						$scope.beforeCollapse = $scope.allServices[0..2]
 						$scope.afterCollapse = $scope.allServices[3..]
 
+			##load slideShow
 			$.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->
 				slideShow = $('#slideShow')
 				images = (img.acf.image for img in json)

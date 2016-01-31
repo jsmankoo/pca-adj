@@ -1,0 +1,72 @@
+extends ./layout.jade
+
+block style
+	link(rel="stylesheet" href="/css/overview.css")
+
+block content
+	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
+		#featureImg
+			img(ng-src='{{json.acf.headImage}}')
+		#headTitle
+			.row: h1.text-center  {{json.title.rendered}}
+		#main
+			.container(ng-bind-html='htmlContent')
+
+block script
+	script
+		:coffee-script
+			##load midSection
+			app = angular.module 'pcaApp', ['ngSanitize']
+			app.controller 'ctrl', ($scope, $http)->
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/24'
+					.then (json)->
+						$scope.json = json.data
+						$scope.htmlContent = json.data.content.rendered
+
+						wid = $(window).width()
+						ratio = 1600/340
+						height = wid/ratio
+
+						#crop feature image on init
+						if wid > 1600
+							$('#featureImg img').css {
+								'height':"#{height}"
+								'width':"#{wid}"
+								'margin': "#{(340 - height)/2}px 0px 0px 0px"
+							}
+						else if wid > 768
+							$('#featureImg img').css {
+								'height':"340px"
+								'width':"1600px"
+								'margin': "0px 0px 0px #{(wid-1600)/2}px"
+							}
+						else if wid <= 768
+							$('#featureImg img').css {
+								'height':"170px"
+								'width':"800px"
+								'margin': "0px 0px 0px #{(wid-800)/2}px"
+							}
+			#crop feature image on resize
+			$(window).resize ()->
+				wid = $(window).width()
+				ratio = 1600/340
+				height = wid/ratio
+
+				if wid > 1600
+					$('#featureImg img').css {
+						'height':"#{height}"
+						'width':"#{wid}"
+						'margin': "#{(340 - height)/2}px 0px 0px 0px"
+					}
+				else if wid > 768
+					$('#featureImg img').css {
+						'height':"340px"
+						'width':"1600px"
+						'margin': "0px 0px 0px #{(wid-1600)/2}px"
+					}
+				else if wid <= 768
+					$('#featureImg img').css {
+						'height':"170px"
+						'width':"800px"
+						'margin': "0px 0px 0px #{(wid-800)/2}px"
+					}

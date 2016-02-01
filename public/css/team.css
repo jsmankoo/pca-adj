@@ -357,6 +357,10 @@ html body #main .office .row .officeLocation {
     margin: 0px 8% 20px;
     color: #3f3f3f;
   }
+  #main .office .row .col-md-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
   #main .office .row .officeLocation {
     font-size: 30px;
     margin: 30px 25% auto 25%;

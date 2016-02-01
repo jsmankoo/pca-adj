@@ -13,7 +13,7 @@ block content
 			.container
 				.row(ng-bind-html='htmlContent')
 				.row(ng-controller='locations')
-					.office(ng-repeat='i in locations')
+					.container.office(ng-repeat='i in locations')
 						.row
 							h1.officeLocation.text-center {{i.acf.name}}
 						.row

@@ -9,7 +9,7 @@ block content
 			img(ng-src='{{json.acf.headImage}}')
 		#headTitle
 			.container: .row: h1.text-center  {{json.acf.pageTitle}}
-		#postsFilter
+		//#postsFilter
 			.container
 				ul
 					li: a.btn.btn-default(ng-click='news()') <i class="fa fa-globe"></i> NEWS
@@ -29,7 +29,6 @@ block content
 								li.date(ng-init='date = post.date' ng-bind='date | date:"MMMM dd, yyyy"')
 						.row
 							.postExcerpt(ng-bind-html='post.excerpt.rendered')
-
 
 block script
 	script

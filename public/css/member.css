@@ -310,6 +310,7 @@ html body {
   color: #000;
 }
 html body #featureImg {
+  overflow: hidden;
   z-index: -1;
 }
 html body #featureImg .item {

@@ -8,7 +8,7 @@ block content
 		#featureImg
 			img(ng-src='{{json.acf.headImage}}')
 		#headTitle
-			.row: h1.text-center  {{json.title.rendered}}
+			.container: .row: h1.text-center  {{json.title.rendered}}
 		#main
 			.container
 				.row(ng-bind-html='htmlContent')

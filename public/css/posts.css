@@ -310,6 +310,7 @@ html body {
   color: #000;
 }
 html body #featureImg {
+  overflow: hidden;
   z-index: -1;
 }
 html body #featureImg .item {
@@ -317,6 +318,7 @@ html body #featureImg .item {
   display: block;
 }
 html body #headTitle {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -325,10 +327,82 @@ html body #headTitle h1 {
   margin: auto;
   color: #fff;
 }
-html body #main p {
-  text-align: center;
+html body #postsFilter {
+  background-color: #f3f6fb;
+  border-bottom: 5px solid #d5e0f0;
+}
+html body #postsFilter .container ul {
+  list-style-type: none;
+  display: table;
   margin: auto;
+}
+html body #postsFilter .container ul li {
+  margin: 35px 37px;
+  display: inline-block;
+}
+html body #postsFilter .container ul li .btn.btn-default {
+  font-size: 25px;
+  font-weight: 700;
+  background-color: #2c64b2;
+  color: #fff;
+  width: 210px;
+  height: 50px;
+  border: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  display: block;
+  margin: auto;
+}
+html body #postsFilter .container ul li .btn.btn-default i.fa {
+  font-size: 30px;
+}
+html body #postsFilter .container ul li .btn.btn-default:hover {
+  background-color: #000;
+  color: #fff;
+}
+html body #main .container .row.post {
+  margin: 90px auto;
+}
+html body #main .container .row.post .col-md-4 a img {
+  margin-top: 7px;
+  width: 270px;
+  height: 270px;
+}
+html body #main .container .row.post .col-md-8 .row a .postTitle {
+  margin: 0px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d5e0f0;
+  font-size: 40px;
+  font-weight: 700;
+  color: #2c64b2;
+}
+html body #main .container .row.post .col-md-8 .row ul {
+  margin: 15px auto 0px;
+  list-style-type: none;
+  display: block;
+  padding-left: 0px;
+}
+html body #main .container .row.post .col-md-8 .row ul li {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: inline;
+  margin: auto 15px auto 0px;
+}
+html body #main .container .row.post .col-md-8 .row ul .category {
+  color: #2c64b2;
+}
+html body #main .container .row.post .col-md-8 .row ul .date {
+  border-left: 2px solid #2c64b2;
+  padding-left: 15px;
+  color: #2c64b2;
+}
+html body #main .container .row.post .col-md-8 .row .postExcerpt {
+  font-size: 16px;
   color: #3f3f3f;
+  line-height: 28px;
+  text-align: left;
+  margin: 25px auto 0px;
 }
 @media only screen and (max-width: 769px) {
   html body #featureImg {
@@ -342,16 +416,6 @@ html body #main p {
     font-size: 36px;
     font-weight: 700;
   }
-  html body #main {
-    padding-top: 40px;
-    padding-bottom: 20px;
-  }
-  html body #main p {
-    font-size: 16px;
-    line-height: 25px;
-    margin: 0px 8% 20px;
-    color: #3f3f3f;
-  }
 }
 @media only screen and (min-width: 769px) {
   html body #featureImg img {
@@ -364,15 +428,5 @@ html body #main p {
   html body #headTitle h1 {
     font-size: 60px;
     font-weight: 700;
-  }
-  html body #main {
-    padding-top: 80px;
-    padding-bottom: 40px;
-  }
-  html body #main p {
-    font-size: 16px;
-    line-height: 25px;
-    margin: 0px 8% 40px;
-    color: #3f3f3f;
   }
 }

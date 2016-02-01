@@ -7,21 +7,87 @@ html body
 	color black
 	#featureImg
 		//Very important
+		overflow hidden
 		z-index -1
 		.item
 			overflow hidden
 			display block
 	#headTitle
+		display block
 		size 100% auto
 		h1
 			text-align center
 			margin auto
 			color white
+	#postsFilter
+		background-color #F3F6FB
+		border-bottom 5px solid #D5E0F0
+		.container
+			ul
+				list-style-type none
+				display table
+				margin auto
+				li
+					margin 35px 37px
+					display inline-block
+					.btn.btn-default
+						font-size: 25px
+						font-weight: 700
+						background-color blue
+						color white
+						size 210px 50px
+						border none
+						border-radius 0px
+						display block
+						margin auto
+						i.fa
+							font-size: 30px
+						&:hover
+							background-color black
+							color white
 	#main
-		p
-			text-align center
-			margin auto
-			color grey
+		.container
+			.row.post
+				margin 90px auto
+				.col-md-4
+					a
+						img
+							margin-top 7px
+							size 270px 270px
+				.col-md-8
+					.row
+						a
+							.postTitle
+								margin 0px
+								padding-bottom 20px
+								border-bottom 1px solid #D5E0F0
+								font-size 40px
+								font-weight: 700
+								color blue
+						ul
+							margin 15px auto 0px
+							list-style-type none
+							display block
+							padding-left 0px
+							li
+								font-weight: 700
+								text-transform: uppercase
+								font-size 16px
+								display inline
+								margin auto 15px auto 0px
+							.category
+								color blue
+							.date
+								border-left 2px solid blue
+								padding-left 15px
+								color blue
+					.row
+						.postExcerpt
+							font-size 16px
+							color grey
+							line-height 28px
+							text-align: left
+							margin 25px auto 0px
 
 	+below(769px)
 		#featureImg
@@ -31,14 +97,7 @@ html body
 			h1
 				font-size: 36px
 				font-weight: 700
-		#main
-			padding-top 40px
-			padding-bottom 20px
-			p
-				font-size: 16px
-				line-height 25px
-				margin 0px 8% 20px
-				color grey
+
 	+above(769px)
 		#featureImg
 			img
@@ -48,11 +107,3 @@ html body
 			h1
 				font-size: 60px
 				font-weight: 700
-		#main
-			padding-top 80px
-			padding-bottom 40px
-			p
-				font-size: 16px
-				line-height 25px
-				margin 0px 8% 40px
-				color grey

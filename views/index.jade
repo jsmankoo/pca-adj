@@ -83,7 +83,7 @@ block script
 
 			## load all services
 			app.controller 'servicesCtrl', ($scope, $http)->
-				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/service'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/service?per_page=50'
 					.then (json)->
 						$scope.allServices = ( i.acf for i in json.data)
 						$scope.beforeCollapse = $scope.allServices[0..2]

@@ -24,6 +24,12 @@ app.get '/overview', (req, res)->
 app.get '/team', (req, res)->
     res.render 'team'
 
+app.get '/team/:id', (req, res)->
+    id = req.params.id
+    res.render 'member', {
+        memberID: id
+    }
+
 app.get '/jobs', (req, res)->
     res.render 'jobs'
 

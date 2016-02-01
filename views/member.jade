@@ -1,0 +1,99 @@
+extends ./layout.jade
+
+block style
+	link(rel="stylesheet" href="/css/member.css")
+
+block content
+	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
+		#featureImg
+			img(ng-src='{{dude.acf.feature}}')
+		#headTitle
+			.row: h1.text-center  {{dude.title.rendered}}
+		#main
+			.container
+				.row
+					.col-md-4
+						.profile.thumbnail
+							img.pic(ng-src='{{dude.acf.picture}}')
+							h2.name.text-center {{dude.acf.name}}
+							p.text-center.position(ng-if='dude.acf.position != ""') {{dude.acf.position}}
+							p.text-center.phone(ng-if='dude.acf.phone != ""') {{dude.acf.phone}}
+							p.text-center.email(ng-if='dude.acf.email != ""') {{dude.acf.email}}
+							a.text-center.btn.btn-default(href='/team') BACK TO TEAM
+					.col-md-8
+						.row
+							h2.specialty SPECIALTY
+							.htmlrendered(ng-bind-html='speciality')
+						.row
+							h2.residency RESIDENCY
+							.htmlrendered(ng-bind-html='residency')
+						.row
+							h2.about ABOUT
+							.htmlrendered(ng-bind-html='about')
+
+
+			//.container(ng-bind-html='htmlContent')
+
+block script
+	script.
+		//this makes my server-side variable passed as global constant. can access via window.memberID
+		var memberID = '#{memberID}';
+	script
+		:coffee-script
+			##load midSection
+			app = angular.module 'pcaApp', ['ngSanitize']
+			app.controller 'ctrl', ($scope, $http, $window)->
+				$http.get "http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team/#{$window.memberID}"
+					.then ({ data: dude})->
+						$scope.dude = dude
+						$scope.speciality = dude.acf.speciality
+						$scope.residency = dude.acf.residency
+						$scope.about = dude.acf.about
+
+						wid = $(window).width()
+						ratio = 1600/340
+						height = wid/ratio
+
+						#crop feature image on init
+						if wid > 1600
+							$('#featureImg img').css {
+								'height':"#{height}"
+								'width':"#{wid}"
+								'margin': "#{(340 - height)/2}px 0px 0px 0px"
+							}
+						else if wid > 768
+							$('#featureImg img').css {
+								'height':"340px"
+								'width':"1600px"
+								'margin': "0px 0px 0px #{(wid-1600)/2}px"
+							}
+						else if wid <= 768
+							$('#featureImg img').css {
+								'height':"170px"
+								'width':"800px"
+								'margin': "0px 0px 0px #{(wid-800)/2}px"
+							}
+			#crop feature image on resize
+			$(window).resize ()->
+				wid = $(window).width()
+				ratio = 1600/340
+				height = wid/ratio
+
+				if wid > 1600
+					$('#featureImg img').css {
+						'height':"#{height}"
+						'width':"#{wid}"
+						'margin': "#{(340 - height)/2}px 0px 0px 0px"
+					}
+				else if wid > 768
+					$('#featureImg img').css {
+						'height':"340px"
+						'width':"1600px"
+						'margin': "0px 0px 0px #{(wid-1600)/2}px"
+					}
+				else if wid <= 768
+					$('#featureImg img').css {
+						'height':"170px"
+						'width':"800px"
+						'margin': "0px 0px 0px #{(wid-800)/2}px"
+					}

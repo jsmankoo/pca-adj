@@ -1,0 +1,152 @@
+@import './includes/variables'
+@import './includes/layout'
+@import 'nib'
+@import 'rupture'
+
+html body
+	color black
+	#featureImg
+		//Very important
+		z-index -1
+		.item
+			overflow hidden
+			display block
+	#headTitle
+		size 100% auto
+		h1
+			text-align center
+			margin auto
+			color white
+	#main
+		.container
+			.row
+				.col-md-4
+					.profile.thumbnail
+						border none
+						//.pic
+						.name
+							font-weight: 700
+							text-transform: uppercase
+							color blue
+						.position
+							font-weight: 700
+							text-transform: uppercase
+							color grey
+						.phone
+							font-weight: 700
+						.email
+							font-weight: 700
+							color blue
+						.btn.btn-default
+							background-color blue
+							color white
+							size 160px 30px
+							border none
+							border-radius 0px
+							display block
+							margin auto
+							&:hover
+								background-color black
+								color white
+								
+				.col-md-8
+					.row
+						.specialty
+						.residency
+						.about
+							font-weight: 700
+							text-transform: uppercase
+							color blue
+						.htmlrendered
+							color grey
+
+	+below(769px)
+		#featureImg
+			margin-top 90px
+		#headTitle
+			absolute top 155px
+			h1
+				font-size: 36px
+				font-weight: 700
+		#main
+			.container
+				padding-top 30px
+				padding-bottom 40px
+				.row
+					.col-md-4
+						.profile.thumbnail
+							//.pic
+							.name
+								font-size: 22px
+								margin 15px auto 5px
+							//.position
+							//.phone
+							.email
+								font-size 16px
+							.btn.btn-default
+								margin 15px auto 5px
+									
+					.col-md-8
+						.row
+							padding-left 20px
+							padding-right 20px
+							.specialty
+							.residency
+							.about
+								font-size: 22px
+								margin 0px auto 10px
+								text-align: left
+							.htmlrendered
+								font-size: 16px
+								text-align: left
+								line-height 25px
+								margin-bottom 15px
+								ul
+									padding-left 20px
+									margin 0px auto 11px
+	+above(769px)
+		#featureImg
+			img
+				margin-top 0px
+		#headTitle
+			absolute top 200px
+			h1
+				font-size: 60px
+				font-weight: 700
+		#main
+			.container
+				padding-top 60px
+				padding-bottom 80px
+				.row
+					.col-md-4
+						.profile.thumbnail
+							//.pic
+							.name
+								font-size: 22px
+								margin 30px auto 10px
+							//.position
+							//.phone
+							.email
+								font-size 16px
+							.btn.btn-default
+								margin 30px auto 10px
+									
+					.col-md-8
+						.row
+							padding-left 50px
+							border-left 1px solid blue
+							.specialty
+							.residency
+							.about
+								font-size: 22px
+								margin 0px auto 20px
+								text-align: left
+							.htmlrendered
+								font-size: 16px
+								text-align: left
+								line-height 28px
+								margin-bottom 30px
+								ul
+									padding-left 20px
+									margin 0px auto 22px
+									

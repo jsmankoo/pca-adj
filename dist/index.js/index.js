@@ -34,6 +34,14 @@
     return res.render('team');
   });
 
+  app.get('/team/:id', function(req, res) {
+    var id;
+    id = req.params.id;
+    return res.render('member', {
+      memberID: id
+    });
+  });
+
   app.get('/jobs', function(req, res) {
     return res.render('jobs');
   });

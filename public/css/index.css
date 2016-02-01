@@ -1,0 +1,602 @@
+nav.navbar.navbar-default.navbar-fixed-top {
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  border-bottom-width: 5px;
+  border-color: #cbdaf1;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2c64b2;
+}
+nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a:hover,
+nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a:focus {
+  color: #000;
+}
+@media only screen and (max-width: 769px) {
+  nav.navbar.navbar-default.navbar-fixed-top {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 0px;
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons {
+    display: none;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain {
+    margin-top: 10px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand {
+    margin-top: -5px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand img {
+    width: auto;
+    height: 45px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header button {
+    background: transparent;
+    border: none;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar {
+    border: none;
+    width: 100%;
+    height: auto;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav {
+    margin-top: 17px;
+    margin-bottom: 0px;
+    background: #2c64b2;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav li a {
+    margin: auto 10%;
+    color: #fff;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav li a i.fa {
+    float: right;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a:hover,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a:focus {
+    background: transparent;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .dropdown .dropdown-menu {
+    padding: 0px;
+    margin: auto 10%;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-color: #2c64b2;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .dropdown .dropdown-menu a {
+    color: #fff;
+    margin: auto 0px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .dropdown .dropdown-menu a:hover,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .dropdown .dropdown-menu a:focus {
+    background-color: #fff;
+    color: #000;
+  }
+}
+@media only screen and (min-width: 769px) {
+  nav.navbar.navbar-default.navbar-fixed-top {
+    width: 100%;
+    height: 128px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons {
+    display: block;
+    background: transparent;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul {
+    list-style-type: none;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul li {
+    display: inline;
+    margin: 0px 10px 0px 0px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul li a {
+    font-size: 12px;
+    font-weight: 700;
+    width: 160px;
+    height: 30px;
+    background-color: #2c64b2;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    padding: 6px 0px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul li a:hover,
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul li a:focus {
+    background-color: #000;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navClientButtons ul li a i.fa {
+    padding-right: 17px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand {
+    margin-top: -20px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand img {
+    width: 285px;
+    height: 60px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav {
+    margin-top: 10px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .open a,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .open a:hover,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .open a:focus {
+    background: transparent;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .dropdown a.dropdown-toggle {
+    padding-bottom: 42px;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .dropdown .dropdown-menu {
+    width: 225px;
+    height: auto;
+    background-color: #2c64b2;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .dropdown .dropdown-menu a {
+    color: #fff;
+  }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .dropdown .dropdown-menu a:hover,
+  nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav .dropdown .dropdown-menu a:focus {
+    color: #000;
+  }
+}
+footer {
+  border-top: 5px solid #d5e1f1;
+  background-color: #f3f6fb;
+}
+footer #footerClientButtons {
+  display: block;
+  background: transparent;
+}
+footer #footerClientButtons a {
+  font-size: 12px;
+  font-weight: 700;
+  width: 160px;
+  height: 30px;
+  background-color: #2c64b2;
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  padding: 6px 0px;
+}
+footer #footerClientButtons a:hover,
+footer #footerClientButtons a:focus {
+  background-color: #000;
+}
+footer #footerClientButtons a i.fa {
+  padding-right: 17px;
+}
+footer #footerLinks ul {
+  font-weight: 700;
+  display: block;
+  margin: auto;
+  list-style-type: none;
+}
+footer #footerLinks ul li {
+  display: inline;
+}
+footer #footerLogo img {
+  display: block;
+  margin: auto;
+}
+footer #copyWrite {
+  color: #7f7f7f;
+  text-align: center;
+}
+footer .siteBy {
+  color: #7f7f7f;
+  text-align: center;
+  margin: 20px auto 20px;
+}
+footer .siteBy img {
+  width: 200px;
+  height: auto;
+}
+@media only screen and (max-width: 769px) {
+  footer #footerClientButtons #form a {
+    display: block;
+    margin: 0px auto 25px;
+  }
+  footer #footerClientButtons #login a {
+    display: block;
+    margin: 0px auto;
+  }
+  footer #footerLinks ul {
+    padding: 0px;
+    margin: 45px auto;
+    text-align: center;
+  }
+  footer #footerLinks ul li {
+    display: block;
+    margin: 10px auto;
+  }
+  footer #footerLinks ul li a {
+    text-decoration: none;
+  }
+  footer #footerLinks ul li a:hover,
+  footer #footerLinks ul li a:focus {
+    color: #000;
+  }
+  footer #footerLogo img {
+    width: auto;
+    height: 35px;
+    margin: 45px auto 30px;
+  }
+  footer #copyWrite {
+    margin: 0px auto 15px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  footer #footerClientButtons {
+    display: block;
+    margin: -20px auto 0px;
+  }
+  footer #footerClientButtons #form a {
+    float: right;
+  }
+  footer #footerClientButtons #login a {
+    float: left;
+  }
+  footer #footerLinks ul {
+    margin: 45px auto;
+    text-align: center;
+  }
+  footer #footerLinks ul li {
+    display: inline;
+  }
+  footer #footerLinks ul li a {
+    text-decoration: none;
+    padding: 5px 20px;
+  }
+  footer #footerLinks ul li a:hover,
+  footer #footerLinks ul li a:focus {
+    color: #000;
+  }
+  footer #footerLogo img {
+    width: auto;
+    height: 40px;
+    margin: 35px auto;
+  }
+  footer #copyWrite {
+    margin: 0px auto 25px;
+  }
+  footer .siteBy {
+    margin-top: 0px;
+  }
+}
+html body {
+  font-family: 'museo-sans';
+}
+html body a {
+  text-decoration: none;
+  font-weight: 700;
+}
+html body a:hover,
+html body a:focus,
+html body a:active {
+  text-decoration: none;
+}
+html body a img:hover,
+html body a img:focus {
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+}
+@media only screen and (min-width: 769px) {
+  html body .mobile-only {
+    display: none;
+  }
+}
+@media only screen and (max-width: 769px) {
+  html body .mobile-only {
+    display: block;
+  }
+}
+html body {
+  color: #000;
+}
+html body #slideShow {
+  z-index: -1;
+}
+html body #slideShow .item {
+  overflow: hidden;
+  display: block;
+}
+html body #headings {
+  width: 100%;
+  height: auto;
+  color: #fff;
+}
+html body #headings .heading,
+html body #headings .sub-heading {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+html body #headings #ourTeam {
+  text-align: center;
+  display: block;
+  margin: auto;
+  background-color: #fff;
+  color: #2c64b2;
+  border: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  font-weight: 700;
+  opacity: 0.9;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+  filter: alpha(opacity=90);
+  width: 160px;
+  height: 30px;
+}
+html body #headings #ourTeam:hover,
+html body #headings #ourTeam:focus {
+  background-color: #2c64b2;
+  color: #fff;
+}
+html body #amLogo img {
+  display: block;
+  margin: -80px auto auto;
+  width: 161px;
+  height: 161px;
+}
+html body #midHeading h1 {
+  font-weight: 700;
+  text-align: center;
+}
+html body #midHeading a {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+html body #midSection {
+  background-color: #f3f6fb;
+  border-top: 5px solid #cbdaf1;
+  border-bottom: 5px solid #cbdaf1;
+}
+html body #midSection .thumbnail {
+  border: none;
+  background: transparent;
+}
+html body #services .heading {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c64b2;
+}
+html body #services .service {
+  width: 360px;
+  height: 360px;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+  0: 0px;
+  display: table;
+  margin: 0px auto 60px;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+html body #services .service img {
+  position: absolute;
+  z-index: -9999;
+  width: 360px;
+  height: 360px;
+}
+html body #services .service h2 {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+html body #services .service .sub-heading {
+  line-height: 28px;
+  padding: 0px;
+  margin: 0px 20px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+html body #services .service .onHover {
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0px 40px;
+  display: none;
+  vertical-align: middle;
+  text-align: center;
+}
+html body #services .service:hover,
+html body #services .service:focus {
+  background-color: rgba(44,100,178,0.7);
+}
+html body #services .service:hover h2,
+html body #services .service:focus h2 {
+  display: none;
+}
+html body #services .service:hover .onHover,
+html body #services .service:focus .onHover {
+  display: table-cell;
+}
+html body #services button {
+  display: block;
+  margin: auto;
+  width: 160px;
+  height: 30px;
+  background-color: #2c64b2;
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  text-align: center;
+}
+html body #services button:hover {
+  background-color: #fff;
+  color: #2c64b2;
+}
+@media only screen and (max-width: 769px) {
+  html body #slideShow {
+    margin-top: 90px;
+  }
+  html body #slideShow .item {
+    width: 100%;
+    height: 420px;
+  }
+  html body #slideShow .item img {
+    width: auto;
+    height: 420px;
+  }
+  html body #headings {
+    position: absolute;
+    top: 250px;
+    font-weight: 700;
+  }
+  html body #headings .heading {
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  html body #headings .sub-heading {
+    display: none;
+  }
+  html body #amLogo img {
+    display: block;
+    margin: -61px auto auto;
+    width: 132px;
+    height: 132px;
+  }
+  html body #midHeading h1 {
+    margin: 20px 10% 30px;
+    line-height: 32px;
+    font-size: 18px;
+  }
+  html body #midHeading a {
+    margin: 0px auto 45px;
+  }
+  html body #midSection {
+    padding-top: 45px;
+    padding-bottom: 15px;
+  }
+  html body #midSection #image {
+    width: 200px;
+    height: 200px;
+  }
+  html body #midSection .heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 40px auto 25px;
+  }
+  html body #midSection .paragraph {
+    font-size: 16px;
+    color: #3f3f3f;
+    padding: 0px;
+    margin: 0px 20px 10px;
+    line-height: 30px;
+  }
+  html body #services .col-md-4 {
+    padding: 0px;
+  }
+  html body #services .heading {
+    margin: 47px auto;
+    font-size: 40px;
+  }
+  html body #services .service {
+    width: 297px;
+    height: 297px;
+    background-color: rgba(44,100,178,0.7);
+    margin: 0px auto 20px;
+  }
+  html body #services .service img {
+    width: 297px;
+    height: 297px;
+  }
+  html body #services .service h2 {
+    display: none;
+  }
+  html body #services .service .sub-heading {
+    line-height: 20px;
+    font-size: 20px;
+  }
+  html body #services .service .onHover {
+    line-height: 20px;
+    font-size: 16px;
+    padding: 0px 20px;
+    display: table-cell;
+  }
+  html body #services button {
+    margin-top: 15px;
+    margin-bottom: 47px;
+  }
+}
+@media only screen and (min-width: 769px) {
+  html body #slideShow .item {
+    width: 100%;
+    height: 840px;
+  }
+  html body #slideShow .item img {
+    width: auto;
+    height: 840px;
+  }
+  html body #headings {
+    position: absolute;
+    top: 380px;
+    font-weight: 700;
+  }
+  html body #headings .heading {
+    font-weight: 900;
+    font-size: 60px;
+  }
+  html body #headings .sub-heading {
+    margin: 20px 25% 32px;
+    line-height: 30px;
+    font-size: 20px;
+  }
+  html body #midHeading h1 {
+    margin: 20px 25% 30px;
+    line-height: 38px;
+    font-size: 20px;
+  }
+  html body #midHeading a {
+    margin: 0px auto 45px;
+  }
+  html body #midSection {
+    padding-top: 45px;
+    padding-bottom: 15px;
+  }
+  html body #midSection #image {
+    width: 268px;
+    height: 268px;
+  }
+  html body #midSection .heading {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 45px auto 30px;
+  }
+  html body #midSection .paragraph {
+    font-size: 16px;
+    color: #3f3f3f;
+    padding: 0px;
+    margin: 0px 20px;
+    line-height: 30px;
+  }
+  html body #services .heading {
+    margin: 95px auto;
+    font-size: 60px;
+  }
+  html body #services button {
+    margin-bottom: 82px;
+  }
+}

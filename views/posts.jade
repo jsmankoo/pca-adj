@@ -21,15 +21,14 @@ block content
 					.col-md-4
 						a(ng-href='/post/{{post.id}}'): img(ng-src='{{post.acf.thumbnail}}')
 					.col-md-8
-						.container
-							.row
-								a(ng-href='/post/{{post.id}}'): h1.postTitle {{post.acf.title}}
-							.row
-								ul
-									li.category(ng-repeat='category in post.categories') {{categories[category]}}
-									li.date(ng-init='date = post.date' ng-bind='date | date:"MMMM dd, yyyy"')
-							.row
-								.postExcerpt(ng-bind-html='post.excerpt.rendered')
+						.row
+							a(ng-href='/post/{{post.id}}'): h1.postTitle {{post.acf.title}}
+						.row
+							ul
+								li.category(ng-repeat='category in post.categories') {{categories[category]}}
+								li.date(ng-init='date = post.date' ng-bind='date | date:"MMMM dd, yyyy"')
+						.row
+							.postExcerpt(ng-bind-html='post.excerpt.rendered')
 
 
 block script

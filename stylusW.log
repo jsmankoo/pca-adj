@@ -1,0 +1,49 @@
+
+> pca2015@1.0.0 CStylusW /home/jsmankoo/Projects/PCA2015
+> stylus -u nib -u rupture -w ./src/stylus -o ./public/css
+
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/stylus/lib/functions/index.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/rupture/rupture/index.styl
+  [90mwatching[0m src/stylus/includes/variables.styl
+  [90mwatching[0m src/stylus/includes/layout.styl
+  [90mwatching[0m src/stylus/includes/navbar.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/index.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/border.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/clearfix.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/color-image.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/flex.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/gradients.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/config.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/iconic.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/image.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/index.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/base.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/html5.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/links.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/text.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/embed.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/groups.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/forms.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/normalize/tables.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/overflow.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/positions.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/reset.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/index.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/aliases.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/ellipsis.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/hide-text.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/replace-text.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/text/shadow-stroke.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/vendor.styl
+  [90mwatching[0m /home/jsmankoo/Projects/PCA2015/node_modules/nib/lib/nib/size.styl
+  [90mwatching[0m src/stylus/includes/footer.styl
+  [90mcompiled[0m public/css/index.css
+  [90mwatching[0m src/stylus/index.styl
+  [90mcompiled[0m public/css/member.css
+  [90mwatching[0m src/stylus/member.styl
+  [90mcompiled[0m public/css/overview.css
+  [90mwatching[0m src/stylus/overview.styl
+  [90mcompiled[0m public/css/team.css
+  [90mwatching[0m src/stylus/team.styl
+  [90mcompiled[0m public/css/posts.css
+  [90mwatching[0m src/stylus/posts.styl

@@ -36,11 +36,8 @@ app.get '/jobs', (req, res)->
 app.get '/services', (req, res)->
     res.render 'services'
 
-app.get '/news', (req, res)->
-    res.render 'news'
-
-app.get '/oath', (req, res)->
-    res.render 'oath'
+app.get '/posts', (req, res)->
+    res.render 'posts'
 
 app.get '/contact', (req, res)->
     res.render 'contact'

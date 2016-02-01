@@ -1,54 +1,32 @@
 extends ./layout.jade
 
 block style
-	link(rel="stylesheet" href="/css/member.css")
+	link(rel="stylesheet" href="/css/posts.css")
 
 block content
 	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
 		#featureImg
-			img(ng-src='{{dude.acf.feature}}')
+			img(ng-src='{{json.acf.headImage}}')
 		#headTitle
-			.row: h1.text-center  {{dude.acf.name}}
-		#main
+			.row: h1.text-center  {{json.acf.pageTitle}}
+		#postsFilter
 			.container
-				.row
-					.col-md-4
-						.profile.thumbnail
-							img.pic(ng-src='{{dude.acf.picture}}')
-							h2.name.text-center {{dude.acf.name}}
-							p.text-center.position(ng-if='dude.acf.position != ""') {{dude.acf.position}}
-							p.text-center.phone(ng-if='dude.acf.phone != ""') {{dude.acf.phone}}
-							p.text-center.email(ng-if='dude.acf.email != ""') {{dude.acf.email}}
-							a.text-center.btn.btn-default(href='/team') BACK TO TEAM
-					.col-md-8
-						.row
-							h2.specialty SPECIALTY
-							.htmlrendered(ng-bind-html='speciality')
-						.row
-							h2.residency RESIDENCY
-							.htmlrendered(ng-bind-html='residency')
-						.row
-							h2.about ABOUT
-							.htmlrendered(ng-bind-html='about')
+				ul
+					li: a.btn.btn-default(href='#') NEWS
+					li: a.btn.btn-default(href='#') EVENTS
+					li: a.btn.btn-default(href='#') MISC
+		#main
 
-
-			//.container(ng-bind-html='htmlContent')
 
 block script
-	script.
-		//this makes my server-side variable passed as global constant. can access via window.memberID
-		var memberID = '#{memberID}';
 	script
 		:coffee-script
 			##load midSection
 			app = angular.module 'pcaApp', ['ngSanitize']
-			app.controller 'ctrl', ($scope, $http, $window)->
-				$http.get "http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team/#{$window.memberID}"
-					.then ({ data: dude})->
-						$scope.dude = dude
-						$scope.speciality = dude.acf.speciality
-						$scope.residency = dude.acf.residency
-						$scope.about = dude.acf.about
+			app.controller 'ctrl', ($scope, $http)->
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/249'
+					.then (json)->
+						$scope.json = json.data
 
 						wid = $(window).width()
 						ratio = 1600/340

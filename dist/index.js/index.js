@@ -50,12 +50,8 @@
     return res.render('services');
   });
 
-  app.get('/news', function(req, res) {
-    return res.render('news');
-  });
-
-  app.get('/oath', function(req, res) {
-    return res.render('oath');
+  app.get('/posts', function(req, res) {
+    return res.render('posts');
   });
 
   app.get('/contact', function(req, res) {

@@ -360,19 +360,12 @@ html body #postsFilter .container ul li .btn.btn-default:hover {
   background-color: #000;
   color: #fff;
 }
-html body #main .container .row.post {
-  margin: 90px auto;
-}
 html body #main .container .row.post .col-md-4 a img {
-  margin-top: 7px;
   width: 270px;
   height: 270px;
 }
 html body #main .container .row.post .col-md-8 .row a .postTitle {
-  margin: 0px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #d5e0f0;
-  font-size: 40px;
   font-weight: 700;
   color: #2c64b2;
 }
@@ -398,11 +391,7 @@ html body #main .container .row.post .col-md-8 .row ul .date {
   color: #2c64b2;
 }
 html body #main .container .row.post .col-md-8 .row .postExcerpt {
-  font-size: 16px;
   color: #3f3f3f;
-  line-height: 28px;
-  text-align: left;
-  margin: 25px auto 0px;
 }
 @media only screen and (max-width: 769px) {
   html body #featureImg {
@@ -416,6 +405,34 @@ html body #main .container .row.post .col-md-8 .row .postExcerpt {
     font-size: 36px;
     font-weight: 700;
   }
+  html body #postsFilter .container ul {
+    display: table;
+  }
+  html body #postsFilter .container ul li {
+    margin: 35px 37px;
+    display: inline-block;
+  }
+  html body #main .container .row.post {
+    margin: 60px auto;
+  }
+  html body #main .container .row.post .col-md-4 a img {
+    display: block;
+    margin: auto;
+  }
+  html body #main .container .row.post .col-md-8 .row a .postTitle {
+    text-align: center;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 22px;
+    border: none;
+  }
+  html body #main .container .row.post .col-md-8 .row ul {
+    display: table;
+  }
+  html body #main .container .row.post .col-md-8 .row .postExcerpt {
+    display: none;
+  }
 }
 @media only screen and (min-width: 769px) {
   html body #featureImg img {
@@ -427,6 +444,30 @@ html body #main .container .row.post .col-md-8 .row .postExcerpt {
   }
   html body #headTitle h1 {
     font-size: 60px;
-    font-weight: 700;
+  }
+  html body #postsFilter .container ul {
+    display: table;
+  }
+  html body #postsFilter .container ul li {
+    margin: 35px 37px;
+    display: inline-block;
+  }
+  html body #main .container .row.post {
+    margin: 90px auto;
+  }
+  html body #main .container .row.post .col-md-4 a img {
+    margin-top: 7px;
+  }
+  html body #main .container .row.post .col-md-8 .row a .postTitle {
+    margin: 0px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d5e0f0;
+    font-size: 40px;
+  }
+  html body #main .container .row.post .col-md-8 .row .postExcerpt {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: left;
+    margin: 25px auto 0px;
   }
 }

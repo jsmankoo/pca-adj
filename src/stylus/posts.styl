@@ -48,20 +48,15 @@ html body
 	#main
 		.container
 			.row.post
-				margin 90px auto
 				.col-md-4
 					a
 						img
-							margin-top 7px
 							size 270px 270px
 				.col-md-8
 					.row
 						a
 							.postTitle
-								margin 0px
-								padding-bottom 20px
 								border-bottom 1px solid #D5E0F0
-								font-size 40px
 								font-weight: 700
 								color blue
 						ul
@@ -83,11 +78,7 @@ html body
 								color blue
 					.row
 						.postExcerpt
-							font-size 16px
 							color grey
-							line-height 28px
-							text-align: left
-							margin 25px auto 0px
 
 	+below(769px)
 		#featureImg
@@ -97,6 +88,36 @@ html body
 			h1
 				font-size: 36px
 				font-weight: 700
+		#postsFilter
+			.container
+				ul
+					display table
+					li
+						margin 35px 37px
+						display inline-block
+		#main
+			.container
+				.row.post
+					margin 60px auto
+					.col-md-4
+						a
+							img
+								display block
+								margin auto
+					.col-md-8
+						.row
+							a
+								.postTitle
+									text-align: center
+									margin 0px
+									padding-top 20px
+									padding-bottom 5px
+									font-size 22px
+									border none
+							ul
+								display table
+							.postExcerpt
+								display none
 
 	+above(769px)
 		#featureImg
@@ -106,4 +127,31 @@ html body
 			absolute top 200px
 			h1
 				font-size: 60px
-				font-weight: 700
+		#postsFilter
+			.container
+				ul
+					display table
+					li
+						margin 35px 37px
+						display inline-block
+		#main
+			.container
+				.row.post
+					margin 90px auto
+					.col-md-4
+						a
+							img
+								margin-top 7px
+					.col-md-8
+						.row
+							a
+								.postTitle
+									margin 0px
+									padding-bottom 20px
+									border-bottom 1px solid #D5E0F0
+									font-size 40px
+							.postExcerpt
+								font-size 16px
+								line-height 28px
+								text-align: left
+								margin 25px auto 0px

@@ -344,10 +344,6 @@ html body #main .office .row .officeLocation {
   color: #2c64b2;
   border-bottom: 1px solid #2c64b2;
 }
-html body #main .office .row .name {
-  font-size: 18px;
-  font-weight: 700;
-}
 @media only screen and (max-width: 769px) {
   #featureImg {
     margin-top: 90px;

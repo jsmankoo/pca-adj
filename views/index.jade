@@ -72,14 +72,14 @@ block script
 			##load midSection
 			app = angular.module 'pcaApp', ['ngSanitize']
 			app.controller 'ctrl', ($scope, $http)->
-				$http.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/22'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/22'
 					.then (json)->
 						$scope.json = json.data
 						$scope.htmlContent = json.data.content.rendered
 
 			## load all services
 			app.controller 'servicesCtrl', ($scope, $http)->
-				$http.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/service?per_page=50'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/service?per_page=50'
 					.then (json)->
 						$scope.allServices = ( i.acf for i in json.data)
 						$scope.beforeCollapse = $scope.allServices[0..2]
@@ -87,7 +87,7 @@ block script
 						$('#loaderGif').fadeOut 'slow'
 
 			##load slideShow
-			$.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->
+			$.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->
 				slideShow = $('#slideShow')
 				images = (img.acf.image for img in json)
 				for img in images

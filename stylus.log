@@ -2,3 +2,9 @@
 > pca2015@1.0.0 CStylus /home/jsmankoo/Projects/PCA2015
 > stylus -u nib -u rupture ./src/stylus -o ./public/css
 
+  [90mcompiled[0m public/css/index.css
+  [90mcompiled[0m public/css/member.css
+  [90mcompiled[0m public/css/team.css
+  [90mcompiled[0m public/css/posts.css
+  [90mcompiled[0m public/css/overview.css
+  [90mcompiled[0m public/css/post.css

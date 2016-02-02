@@ -20,7 +20,7 @@ block content
 							.col-md-4(ng-repeat='member in team' ng-if='i.acf.name == member.acf.office')
 								a(ng-href='/team/{{member.id}}').member.thumbnail
 									img.pic(ng-src='{{member.acf.picture}}')
-									h4.text-center.name {{member.acf.name}}
+									h2.text-center.name {{member.acf.name}}
 
 
 block script
@@ -31,7 +31,7 @@ block script
 
 			## Page Controller
 			app.controller 'ctrl', ($scope, $http)->
-				$http.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/223'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/223'
 					.then (json)->
 						$scope.json = json.data
 						$scope.htmlContent = json.data.content.rendered
@@ -62,12 +62,12 @@ block script
 
 			#locations Controller
 			app.controller 'locations', ($scope, $http)->
-				$http.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/locations'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/locations'
 					.then ({data: locations})->
 						$scope.locations = locations
 						
 				##get all members
-				$http.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team?per_page=100'
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team?per_page=100'
 					.then ( {data: team} )->
 						$scope.team = team
 						$('#loaderGif').fadeOut 'slow'

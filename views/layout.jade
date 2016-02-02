@@ -109,7 +109,7 @@ html.no-js
     script
       :coffee-script
         #navbar page id = 26
-        $.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/26', (json)->
+        $.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/26', (json)->
             #brandImage added
             brandImageUrl = json.acf.headImage
             brandImageWraper = $('.navbar-brand').append $("<img src='#{brandImageUrl}'>")
@@ -124,7 +124,7 @@ html.no-js
             $('#mobileNavbar ul li ul').removeClass('nav navbar-nav').addClass()
 
         #footer page id = 28
-        $.get 'https://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/28', (json)->
+        $.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/28', (json)->
             footerString = json.content.rendered
             $('#footerLinks').append $(footerString)
             footerLogo = json.acf.headImage

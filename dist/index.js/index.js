@@ -70,8 +70,8 @@
     });
   });
 
-  app.get('/contact', function(req, res) {
-    return res.render('contact');
+  app.get('/locations', function(req, res) {
+    return res.render('locations');
   });
 
   app.get('*', function(req, res) {

@@ -52,8 +52,8 @@ app.get '/posts/:id', (req, res)->
         postID: id
     }
 
-app.get '/contact', (req, res)->
-    res.render 'contact'
+app.get '/locations', (req, res)->
+    res.render 'locations'
 
     ##handles 404 pages. make sure its the last one
 app.get '*', (req, res)->

@@ -1,0 +1,116 @@
+@import './includes/variables'
+@import './includes/layout'
+@import 'nib'
+@import 'rupture'
+
+html body
+	color black
+	#featureImg
+		//Very important
+		overflow hidden
+		z-index -1
+		.item
+			overflow hidden
+			display block
+	#headTitle
+		size 100% auto
+		h1
+			text-align center
+			margin auto
+			color white
+	#main
+		.container
+			.row
+				img
+					display block
+					margin auto
+			.location
+				.row
+					.title
+						size 1142px 212px
+						max-width 100%
+						display block
+						.officeName
+							line-height 20px
+							font-weight: 700
+							font-size 45px
+							padding-top 100px
+							display block
+							color white
+							.headOffice
+								font-weight: 700
+								font-size 16px
+					.fullAddress
+						margin 0px 25%
+						text-align: center
+						line-height 26px
+						padding-top 40px
+						padding-bottom 40px
+						border-bottom 1px solid border-grey
+					.contact
+						margin 0px 25%
+						padding-top 40px
+						padding-bottom 40px
+						color grey
+						font-size 16px
+						list-style-type none
+						border-bottom 1px solid border-grey
+						li.telephone
+						li.fax
+						li.tollfreephone
+						li.tollfreefax
+						li.email
+							line-height 25px
+							.key
+								font-weight: 700
+								text-align: right
+							.value
+								text-align: left
+						.email .value
+							color blue
+				.team
+					.teamName
+						h1
+							color grey
+							font-size 23px
+							text-align: center
+					.teamMembers
+						ul
+							li
+								
+								a
+									color blue
+
+	+below(769px)
+		#featureImg
+			margin-top 90px
+		#headTitle
+			absolute top 155px
+			h1
+				font-size: 36px
+				font-weight: 700
+		#main
+			padding-top 40px
+			padding-bottom 20px
+			p
+				font-size: 16px
+				line-height 25px
+				margin 0px 8% 20px
+				color grey
+	+above(769px)
+		#featureImg
+			img
+				margin-top 0px
+		#headTitle
+			absolute top 200px
+			h1
+				font-size: 60px
+				font-weight: 700
+		#main
+			padding-top 80px
+			padding-bottom 40px
+			p
+				font-size: 16px
+				line-height 25px
+				margin 0px 8% 40px
+				color grey

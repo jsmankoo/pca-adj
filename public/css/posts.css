@@ -338,7 +338,7 @@ html body #headTitle h1 {
 }
 html body #postsFilter {
   background-color: #f3f6fb;
-  border-bottom: 5px solid #d5e0f0;
+  border-bottom: 5px solid #d5e0f1;
 }
 html body #postsFilter .container ul {
   list-style-type: none;
@@ -374,7 +374,7 @@ html body #main .container .row.post .col-md-4 a img {
   height: 270px;
 }
 html body #main .container .row.post .col-md-8 .row a .postTitle {
-  border-bottom: 1px solid #d5e0f0;
+  border-bottom: 1px solid #d5e0f1;
   font-weight: 700;
   color: #2c64b2;
 }
@@ -470,7 +470,7 @@ html body #main .container .row.post .col-md-8 .row .postExcerpt {
   html body #main .container .row.post .col-md-8 .row a .postTitle {
     margin: 0px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #d5e0f0;
+    border-bottom: 1px solid #d5e0f1;
     font-size: 40px;
   }
   html body #main .container .row.post .col-md-8 .row .postExcerpt {

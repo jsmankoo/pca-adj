@@ -1,0 +1,119 @@
+extends ./layout.jade
+
+block style
+	link(rel="stylesheet" href="/css/locations.css")
+
+block content
+	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
+		#featureImg
+			img(ng-src='{{json.acf.headImage}}')
+		#headTitle
+			.container: .row: h1.text-center  {{json.title.rendered}}
+		#main
+			.container
+				.row
+					img(ng-src='{{json.acf.contactImage}}')
+				.location(ng-repeat='location in locations')
+					.row
+						.title(
+							ng-style="{'background-image':'url({{location.acf.image}})'}"
+						)
+							h1.text-center.officeName {{location.acf.name}}
+								.text-center(ng-if='location.acf.head_office').headOffice <br>HEAD OFFICE
+					.row
+						p.fullAddress(ng-bind-html='location.acf.address')
+					.row
+						ul.contact
+							li.telephone(ng-if='location.acf.telephone != ""').row
+								.key.col-xs-6 Telephone:
+								.value.col-xs-6 {{location.acf.telephone}}
+							li.fax(ng-if='location.acf.fax != ""').row
+								.key.col-xs-6 Fax:
+								.value.col-xs-6 {{location.acf.fax}}
+							li.tollfreephone(ng-if='location.acf.tollfreephone != ""').row
+								.key.col-xs-6 Toll Free Phone:
+								.value.col-xs-6 {{location.acf.tollfreephone}}
+							li.tollfreefax(ng-if='location.acf.tollfreefax != ""').row
+								.key.col-xs-6 Toll Free Fax:
+								.value.col-xs-6 {{location.acf.tollfreefax}}
+							li.email(ng-if='location.acf.email != ""').row
+								.key.col-xs-6 Email:
+								.value.col-xs-6 {{location.acf.email}}
+					.team
+						.row.teamName
+							h1.text-center TEAM
+						.row.teamMembers
+							ul
+								li.text-center(ng-repeat='dude in team' ng-if='dude.acf.office == location.acf.name')
+									a(ng-href="/team/{{dude.id}}") {{dude.acf.name}}
+
+
+block script
+	script
+		:coffee-script
+			##load midSection
+			app = angular.module 'pcaApp', ['ngSanitize']
+			app.controller 'ctrl', ($scope, $http)->
+				#load team
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team?per_page=100'
+					.then ({data: team})->
+						console.log team
+						$scope.team = team
+				#load locations
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/locations'
+					.then ({data: locations})->
+						console.log locations
+						$scope.locations = locations
+				#load page content
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/290'
+					.then (json)->
+						$scope.json = json.data
+						$('#loaderGif').fadeOut 'slow'
+
+						wid = $(window).width()
+						ratio = 1600/340
+						height = wid/ratio
+
+						#crop feature image on init
+						if wid > 1600
+							$('#featureImg img').css {
+								'height':"#{height}"
+								'width':"#{wid}"
+								'margin': "#{(340 - height)/2}px 0px 0px 0px"
+							}
+						else if wid > 768
+							$('#featureImg img').css {
+								'height':"340px"
+								'width':"1600px"
+								'margin': "0px 0px 0px #{(wid-1600)/2}px"
+							}
+						else if wid <= 768
+							$('#featureImg img').css {
+								'height':"170px"
+								'width':"800px"
+								'margin': "0px 0px 0px #{(wid-800)/2}px"
+							}
+			#crop feature image on resize
+			$(window).resize ()->
+				wid = $(window).width()
+				ratio = 1600/340
+				height = wid/ratio
+
+				if wid > 1600
+					$('#featureImg img').css {
+						'height':"#{height}"
+						'width':"#{wid}"
+						'margin': "#{(340 - height)/2}px 0px 0px 0px"
+					}
+				else if wid > 768
+					$('#featureImg img').css {
+						'height':"340px"
+						'width':"1600px"
+						'margin': "0px 0px 0px #{(wid-1600)/2}px"
+					}
+				else if wid <= 768
+					$('#featureImg img').css {
+						'height':"170px"
+						'width':"800px"
+						'margin': "0px 0px 0px #{(wid-800)/2}px"
+					}

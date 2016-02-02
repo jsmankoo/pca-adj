@@ -88,6 +88,7 @@ block script
 						$scope.allServices = ( i.acf for i in json.data)
 						$scope.beforeCollapse = $scope.allServices[0..2]
 						$scope.afterCollapse = $scope.allServices[3..]
+						$('#loaderGif').fadeOut 'slow'
 
 			##load slideShow
 			$.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->

@@ -72,6 +72,7 @@ block script
 				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/team?per_page=100'
 					.then ( {data: team} )->
 						$scope.team = team
+						$('#loaderGif').fadeOut 'slow'
 
 
 			#crop feature image on resize

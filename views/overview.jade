@@ -22,6 +22,7 @@ block script
 					.then (json)->
 						$scope.json = json.data
 						$scope.htmlContent = json.data.content.rendered
+						$('#loaderGif').fadeOut 'slow'
 
 						wid = $(window).width()
 						ratio = 1600/340

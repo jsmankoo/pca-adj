@@ -30,6 +30,7 @@ block script
 						for category in categories
 							allCategories[category.id] = category.name
 						$scope.categories = allCategories
+						$('#loaderGif').fadeOut 'slow'
 			app.controller 'ctrl', ($scope, $http)->
 				$http.get "http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/posts/#{window.postID}"
 					.then ({data: post})->

@@ -12,7 +12,10 @@
     "CStart": "((npm run CCoffee > coffee.log &); npm run CStylus > stylus.log &); node ./dist/index.js",
     "CDev": "((npm run CCoffeeW > coffeeW.log &); npm run CStylusW > stylusW.log &); nodemon ./dist/index.js",
     "dev":"nodemon ./dist/index.js",
-    "start":"node ./dist/index.js"
+    "start":"node ./dist/index.js",
+    "production": "forever start ./dist/index.js",
+    "close":"forever stop 0",
+    "list":"forever list"
   },
   "repository": {
     "type": "git",

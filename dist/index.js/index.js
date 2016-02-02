@@ -42,6 +42,14 @@
     });
   });
 
+  app.get('/david-cernak', function(req, res) {
+    var id;
+    id = req.params.id;
+    return res.render('member', {
+      memberID: 85
+    });
+  });
+
   app.get('/jobs', function(req, res) {
     return res.render('jobs');
   });

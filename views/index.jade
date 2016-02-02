@@ -13,16 +13,12 @@ block content
 			.container
 				.row: .col-md-12
 					h1.heading.text-center {{json.acf.headline}}
-				.row: .col-md-12
-					p.sub-heading.text-center {{json.acf.subheadline}}
-				.row: .col-md-12
-					a.btn.btn-default#ourTeam(href='/team') MEET OUR TEAM
 
 		#amLogo
 			img(ng-src="{{json.acf.headImage}}")
 		#midHeading
 			#content(ng-bind-html='htmlContent')
-			a#more(href='/overview') MORE
+			a#more(href='http://www.ambest.com/home/default.aspx') MORE
 		#midSection
 			.container
 				.row

@@ -30,6 +30,13 @@ app.get '/team/:id', (req, res)->
         memberID: id
     }
 
+app.get '/david-cernak', (req, res)->
+    id = req.params.id
+    res.render 'member', {
+        memberID: 85
+    }
+
+
 app.get '/jobs', (req, res)->
     res.render 'jobs'
 

@@ -3,3 +3,5 @@
 > coffee -c -o ./dist/index.js -w ./src/index.coffee
 
 4:54:02 PM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee
+9:48:00 PM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee
+9:48:43 PM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee

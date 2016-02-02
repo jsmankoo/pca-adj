@@ -34,6 +34,7 @@ nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a:focus {
   }
   nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand {
     margin-top: -5px;
+    padding-right: 0px;
   }
   nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-header .navbar-brand img {
     width: auto;

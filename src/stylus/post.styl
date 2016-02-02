@@ -1,0 +1,65 @@
+@import './includes/variables'
+@import './includes/layout'
+@import 'nib'
+@import 'rupture'
+
+html body
+	#main
+		h1, h2, h3, h4, h5, h6
+			color blue
+		.postTitle
+			font-weight: 700
+			color blue
+		#catDate
+			margin 20px auto 0px
+			list-style-type none
+			display table
+			padding-left 0px
+			.date
+			.category
+				font-weight: 700
+				text-transform: uppercase
+				font-size 16px
+				display inline
+				margin auto 15px auto 0px
+				color blue
+			.date
+				border-left 2px solid blue
+				padding-left 15px
+				color blue
+		.postContent
+			color grey
+			img
+				max-width 100%
+				height auto
+			iframe
+				max-width 100%
+
+	+below(769px)
+		#main
+			margin-top 0px
+			padding-top 90px
+			padding-bottom 70px
+			.postTitle
+				margin 40px auto 0px
+				padding-bottom 0px
+				font-size 30px
+			.postContent
+				font-size 16px
+				line-height 28px
+				text-align: left
+				margin 25px 20px 0px
+
+	+above(769px)
+		#main
+			margin-top 190px
+			padding-bottom 135px
+			.postTitle
+				margin 0px
+				padding-bottom 0px
+				font-size 60px
+			.postContent
+				font-size 16px
+				line-height 28px
+				text-align: left
+				margin 25px auto 0px

@@ -39,6 +39,12 @@ app.get '/services', (req, res)->
 app.get '/posts', (req, res)->
     res.render 'posts'
 
+app.get '/posts/:id', (req, res)->
+    id = req.params.id
+    res.render 'post', {
+        postID: id
+    }
+
 app.get '/contact', (req, res)->
     res.render 'contact'
 

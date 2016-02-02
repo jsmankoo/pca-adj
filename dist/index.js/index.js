@@ -54,6 +54,14 @@
     return res.render('posts');
   });
 
+  app.get('/posts/:id', function(req, res) {
+    var id;
+    id = req.params.id;
+    return res.render('post', {
+      postID: id
+    });
+  });
+
   app.get('/contact', function(req, res) {
     return res.render('contact');
   });

@@ -2,4 +2,4 @@
 > pca2015@1.0.0 CCoffeeW /home/jsmankoo/Projects/PCA2015
 > coffee -c -o ./dist/index.js -w ./src/index.coffee
 
-7:05:35 AM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee
+4:54:02 PM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee

@@ -1,0 +1,39 @@
+extends ./layout.jade
+
+block style
+	link(rel="stylesheet" href="/css/post.css")
+
+block content
+	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
+		#main
+			.container(ng-controller='catCtrl')
+				.row
+					h1.postTitle.text-center {{post.acf.title}}
+				.row
+					ul#catDate
+						li.category(ng-repeat='category in post.categories') {{categories[category]}}
+						li.date(ng-bind='date | date:"MMMM dd, yyyy"')
+				.row
+					.postContent.text-center
+
+block script
+	script.
+		var postID = '#{postID}';
+	script
+		:coffee-script
+			##load midSection
+			app = angular.module 'pcaApp', ['ngSanitize']
+			app.controller 'catCtrl', ($scope, $http)->
+				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/categories'
+					.then ({data: categories})->
+						allCategories = {}
+						for category in categories
+							allCategories[category.id] = category.name
+						$scope.categories = allCategories
+			app.controller 'ctrl', ($scope, $http)->
+				$http.get "http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/posts/#{window.postID}"
+					.then ({data: post})->
+						$scope.post = post
+						$scope.date = post.date
+
+						$('.postContent').append $(post.content.rendered)

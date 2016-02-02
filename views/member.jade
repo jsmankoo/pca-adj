@@ -21,16 +21,15 @@ block content
 							p.text-center.email(ng-if='dude.acf.email != ""') {{dude.acf.email}}
 							a.text-center.btn.btn-default(href='/team') BACK TO TEAM
 					.col-md-8
-						.container
-							.row
-								h2.specialty SPECIALTY
-								.htmlrendered(ng-bind-html='speciality')
-							.row
-								h2.residency RESIDENCY
-								.htmlrendered(ng-bind-html='residency')
-							.row
-								h2.about ABOUT
-								.htmlrendered(ng-bind-html='about')
+						.row
+							h2.specialty SPECIALTY
+							.htmlrendered(ng-bind-html='speciality')
+						.row
+							h2.residency RESIDENCY
+							.htmlrendered(ng-bind-html='residency')
+						.row
+							h2.about ABOUT
+							.htmlrendered(ng-bind-html='about')
 
 
 			//.container(ng-bind-html='htmlContent')

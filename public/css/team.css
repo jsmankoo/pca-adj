@@ -344,6 +344,10 @@ html body #main .office .row .officeLocation {
   color: #2c64b2;
   border-bottom: 1px solid #2c64b2;
 }
+html body #main .office .row .name {
+  font-size: 18px;
+  font-weight: 700;
+}
 @media only screen and (max-width: 769px) {
   #featureImg {
     margin-top: 90px;
@@ -372,7 +376,7 @@ html body #main .office .row .officeLocation {
   }
   #main .office .row .officeLocation {
     font-size: 30px;
-    margin: 30px 25% auto 25%;
+    margin: 30px 25% 40px 25%;
     padding-bottom: 8px;
   }
   #main .office .row .officePhone {
@@ -406,7 +410,7 @@ html body #main .office .row .officeLocation {
   }
   #main .office .row .officeLocation {
     font-size: 45px;
-    margin: 30px 25% auto 25%;
+    margin: 30px 25% 40px 25%;
     padding-bottom: 15px;
   }
   #main .office .row .officePhone {

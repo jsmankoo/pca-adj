@@ -17,8 +17,6 @@ block content
 						.row
 							h1.officeLocation.text-center {{i.acf.name}}
 						.row
-							p.officePhone.text-center {{i.acf.telephone}}
-						.row
 							.col-md-4(ng-repeat='member in team' ng-if='i.acf.name == member.acf.office')
 								a(ng-href='/team/{{member.id}}').member.thumbnail
 									img.pic(ng-src='{{member.acf.picture}}')

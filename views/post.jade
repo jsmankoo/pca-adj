@@ -36,5 +36,6 @@ block script
 					.then ({data: post})->
 						$scope.post = post
 						$scope.date = post.date
+						console.log post
 
 						$('.postContent').append $(post.content.rendered)

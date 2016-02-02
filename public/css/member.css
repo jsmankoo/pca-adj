@@ -335,6 +335,12 @@ html body #headTitle h1 {
   margin: auto;
   color: #fff;
 }
+html body #headTitle h3 {
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0px;
+}
 html body #main .container .row .col-md-4 .profile.thumbnail {
   border: none;
 }

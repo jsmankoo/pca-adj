@@ -8,7 +8,10 @@ block content
 		#featureImg
 			img(ng-src='{{dude.acf.feature}}')
 		#headTitle
-			.container: .row: h1.text-center  {{dude.acf.name}}
+			.container
+				.row: h1.text-center  {{dude.acf.name}}
+				.row: h3.text-center(ng-if='dude.acf.specialpositions == "Commissioner of Oaths"')  {{dude.acf.specialpositions}}
+
 		#main
 			.container
 				.row

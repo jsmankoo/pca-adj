@@ -31,28 +31,18 @@ html body
 						max-width 100%
 						display block
 						.officeName
-							line-height 20px
 							font-weight: 700
-							font-size 45px
-							padding-top 100px
 							display block
 							color white
 							.headOffice
 								font-weight: 700
-								font-size 16px
 					.fullAddress
-						margin 0px 25%
+						font-size: 16px
+						color grey
 						text-align: center
-						line-height 26px
-						padding-top 40px
-						padding-bottom 40px
 						border-bottom 1px solid border-grey
 					.contact
-						margin 0px 25%
-						padding-top 40px
-						padding-bottom 40px
 						color grey
-						font-size 16px
 						list-style-type none
 						border-bottom 1px solid border-grey
 						li.telephone
@@ -60,7 +50,6 @@ html body
 						li.tollfreephone
 						li.tollfreefax
 						li.email
-							line-height 25px
 							.key
 								font-weight: 700
 								text-align: right
@@ -72,14 +61,13 @@ html body
 					.teamName
 						h1
 							color grey
-							font-size 23px
 							text-align: center
 					.teamMembers
 						ul
+							list-style-type none
 							li
-								
 								a
-									color blue
+									text-transform: uppercase
 
 	+below(769px)
 		#featureImg
@@ -90,13 +78,58 @@ html body
 				font-size: 36px
 				font-weight: 700
 		#main
-			padding-top 40px
-			padding-bottom 20px
-			p
-				font-size: 16px
-				line-height 25px
-				margin 0px 8% 20px
-				color grey
+			.container
+				//.row
+					//img
+				.location
+					.row
+						.title
+							.officeName
+								line-height 20px
+								font-size 45px
+								padding-top 100px
+								.headOffice
+									font-size 16px
+						.fullAddress
+							margin 0px 10%
+							line-height 28px
+							padding-top 25px
+							padding-bottom 25px
+						.contact
+							margin 0px 10%
+							padding-top 25px
+							padding-bottom 25px
+							padding-left 0px
+							font-size 16px
+							li.telephone
+							li.fax
+							li.tollfreephone
+							li.tollfreefax
+							li.email
+								line-height 25px
+								.key
+									padding-left 0px
+								.value
+									padding-right 0px
+							.email .value
+								color blue
+					.team
+						.teamName
+							h1
+								margin-top 25px
+								font-size 23px
+						.teamMembers
+							ul
+								padding-left 0px
+								margin-bottom 40px
+								columns 1
+								-webkit-columns 1
+								-moz-columns 1
+								li
+									line-height 30px
+									text-align: center
+									a
+										font-size 16px
 	+above(769px)
 		#featureImg
 			img
@@ -107,10 +140,51 @@ html body
 				font-size: 60px
 				font-weight: 700
 		#main
-			padding-top 80px
-			padding-bottom 40px
-			p
-				font-size: 16px
-				line-height 25px
-				margin 0px 8% 40px
-				color grey
+			.container
+				//.row
+					//img
+				.location
+					.row
+						.title
+							.officeName
+								line-height 20px
+								font-size 45px
+								padding-top 100px
+								.headOffice
+									font-size 16px
+						.fullAddress
+							margin 0px 25%
+							line-height 28px
+							padding-top 40px
+							padding-bottom 40px
+						.contact
+							margin 0px 25%
+							padding-top 40px
+							padding-bottom 40px
+							font-size 16px
+							li.telephone
+							li.fax
+							li.tollfreephone
+							li.tollfreefax
+							li.email
+								line-height 25px
+								//.key
+								//.value
+							.email .value
+								color blue
+					.team
+						.teamName
+							h1
+								margin-top 40px
+								font-size 23px
+						.teamMembers
+							ul
+								margin auto 15% 65px 25%
+								columns 2
+								-webkit-columns 2
+								-moz-columns 2
+								li
+									line-height 40px
+									text-align: left
+									a
+										font-size 16px

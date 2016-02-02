@@ -59,6 +59,7 @@ block script
 					.then ({data: team})->
 						console.log team
 						$scope.team = team
+						$('#loaderGif').fadeOut 'slow'
 				#load locations
 				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/locations'
 					.then ({data: locations})->
@@ -68,7 +69,6 @@ block script
 				$http.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/290'
 					.then (json)->
 						$scope.json = json.data
-						$('#loaderGif').fadeOut 'slow'
 
 						wid = $(window).width()
 						ratio = 1600/340

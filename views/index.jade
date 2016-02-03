@@ -18,7 +18,7 @@ block content
 			img(ng-src="{{json.acf.headImage}}")
 		#midHeading
 			#content(ng-bind-html='htmlContent')
-			a#more(href='http://www.ambest.com/home/default.aspx') MORE
+			a#more(href='http://www.ambest.com/home/default.aspx' target="_blank") MORE
 		#midSection
 			.container
 				.row
@@ -34,8 +34,8 @@ block content
 							p.text-center.paragraph {{json.acf.paragraphMid}}
 					.col-md-4
 						.thumbnail
-							a(href='/jobs'): img#image(ng-src='{{json.acf.imageRight}}')
-							a(href='/jobs'): h2.heading.text-center {{json.acf.titleRight}}
+							a(href='https://w5.pca-adj.com' target="_blank"): img#image(ng-src='{{json.acf.imageRight}}')
+							a(href='https://w5.pca-adj.com' target="_blank"): h2.heading.text-center {{json.acf.titleRight}}
 							p.text-center.paragraph {{json.acf.paragraphRight}}
 		#services(ng-controller='servicesCtrl')
 			.container

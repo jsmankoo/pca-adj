@@ -12,7 +12,7 @@ block content
 		#main
 			.container
 				.row
-					img(ng-src='{{json.acf.contactImage}}')
+					img#map(ng-src='{{json.acf.contactImage}}')
 				.location(ng-repeat='location in locations')
 					.row
 						.title(

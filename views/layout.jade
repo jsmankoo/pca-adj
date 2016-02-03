@@ -123,6 +123,13 @@ html.no-js
             $('#mobileNavbar ul').addClass 'nav navbar-nav'
             $('#mobileNavbar ul li ul').removeClass('nav navbar-nav').addClass()
 
+            $('.navbar-nav .dropdown-toggle').click ()->
+                $(this).find('i').toggleClass 'fa-chevron-up fa-chevron-down'
+
+            #navbar-toggle
+            $('.navbar-header .navbar-toggle').click ()->
+                $(this).find('i').toggleClass 'fa-times fa-bars'
+
         #footer page id = 28
         $.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/pages/28', (json)->
             footerString = json.content.rendered

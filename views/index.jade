@@ -61,14 +61,17 @@ block content
 
 				.row
 					.col-md-12
-						button.btn(data-toggle='collapse' data-target='#restOfServices') MORE SERVICES
-
-
+						button.btn(data-toggle='collapse' data-target='#restOfServices')
+							i.fa.fa-chevron-down.fa-3x
 
 block script
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')
 	script
 		:coffee-script
+			##
+			$('#services .row i.fa').click ()->
+				$(this).toggleClass 'fa-chevron-up fa-chevron-down'
+
 			##load midSection
 			app = angular.module 'pcaApp', ['ngSanitize']
 			app.controller 'ctrl', ($scope, $http)->

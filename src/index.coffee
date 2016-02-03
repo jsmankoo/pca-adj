@@ -40,6 +40,12 @@ app.get '/david-cernak', (req, res)->
 app.get '/jobs', (req, res)->
     res.render 'jobs'
 
+app.get '/jobs/:id', (req, res)->
+    id = req.params.id
+    res.render 'jobs', {
+        jobID: id
+    }
+
 app.get '/services', (req, res)->
     res.render 'services'
 
@@ -55,7 +61,10 @@ app.get '/posts/:id', (req, res)->
 app.get '/locations', (req, res)->
     res.render 'locations'
 
-    ##handles 404 pages. make sure its the last one
+app.get '/resources', (req, res)->
+    res.render 'resources'
+
+##handles 404 pages. make sure its the last one
 app.get '*', (req, res)->
     res.render '404'
 

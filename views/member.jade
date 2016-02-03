@@ -25,13 +25,13 @@ block content
 							a.text-center.btn.btn-default(href='/team') BACK TO TEAM
 					.col-md-8
 						.row
-							h2.specialty SPECIALTY
+							h2.specialty(ng-if='dude.acf.speciality') SPECIALTY
 							.htmlrendered(ng-bind-html='speciality')
 						.row
-							h2.residency RESIDENCY
+							h2.residency(ng-if='dude.acf.residency') RESIDENCY
 							.htmlrendered(ng-bind-html='residency')
 						.row
-							h2.about ABOUT
+							h2.about(ng-if='dude.acf.about') ABOUT
 							.htmlrendered(ng-bind-html='about')
 
 

@@ -20,7 +20,7 @@ block content
 						li(ng-repeat='job in jobs')
 							a(ng-href='/jobs/{{job.id}}') {{job.title.rendered}}
 				.row
-					a.btn.btn-default info@email.com
+					a(href='mailto:hr@pca-adj.com' target="_top").btn.btn-default hr@pca-adj.com
 
 block script
 	script

@@ -42,7 +42,7 @@ app.get '/jobs', (req, res)->
 
 app.get '/jobs/:id', (req, res)->
     id = req.params.id
-    res.render 'jobs', {
+    res.render 'job', {
         jobID: id
     }
 

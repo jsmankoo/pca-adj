@@ -19,10 +19,21 @@ html body
 			margin auto
 			color white
 	#main
+		h1
+			font-weight: 700
+			color blue
+			padding-bottom 20px
 		p
 			text-align center
 			margin auto
 			color grey
+		ul
+			display table
+			margin auto
+			li
+				font-size: 16px
+				line-height 25px
+				color grey
 
 	+below(769px)
 		#featureImg
@@ -35,11 +46,17 @@ html body
 		#main
 			padding-top 40px
 			padding-bottom 20px
+			h1
+				font-size: 28px
+				font-weight: 700
+				padding-bottom 20px
 			p
 				font-size: 16px
 				line-height 25px
 				margin 0px 8% 20px
 				color grey
+			ul
+				margin 10px auto
 	+above(769px)
 		#featureImg
 			img
@@ -50,10 +67,12 @@ html body
 				font-size: 60px
 				font-weight: 700
 		#main
-			padding-top 80px
+			padding-top 40px
 			padding-bottom 40px
 			p
 				font-size: 16px
 				line-height 25px
-				margin 0px 8% 40px
+				margin 10px 8%
 				color grey
+			ul
+				margin 10px auto

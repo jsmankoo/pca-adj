@@ -1,16 +1,19 @@
 extends ./layout.jade
 
 block style
-	link(rel="stylesheet" href="/css/overview.css")
+	link(rel="stylesheet" href="/css/job.css")
 
 block content
 	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
 		#featureImg
 			img(ng-src='{{json.acf.headImage}}')
 		#headTitle
-			.container: .row: h1.text-center  {{json.title.rendered}}
+			.container: .row: h1.text-center  Job Posting
 		#main
-			.container(ng-bind-html='htmlContent')
+			.container
+				.row
+					h1.text-center {{json.title.rendered}}
+				.row(ng-bind-html='htmlContent')
 
 block script
 	script var jobID = '#{jobID}'

@@ -20,7 +20,9 @@ block content
 							.col-md-4(ng-repeat='member in team' ng-if='i.acf.name == member.acf.office')
 								a(ng-href='/team/{{member.id}}').member.thumbnail
 									img.pic(ng-src='{{member.acf.picture}}')
-									h2.text-center.name {{member.acf.name}}
+									h2.text-center.name.
+										{{member.acf.name}}
+										<div class='pres' ng-if='member.acf.specialpositions == "Commissioner of Oaths"'>PRESIDENT</div>
 
 
 block script

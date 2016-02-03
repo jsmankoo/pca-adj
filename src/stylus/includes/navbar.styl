@@ -3,6 +3,7 @@
 @import 'rupture'
 
 nav.navbar.navbar-default.navbar-fixed-top
+	z-index 9000
 	background white
 	absolute top 0px
 	border-bottom-width 5px
@@ -44,16 +45,20 @@ nav.navbar.navbar-default.navbar-fixed-top
 					margin-top 17px
 					margin-bottom 0px
 					background blue
-					li a
-						margin auto 10%
-						color white
-						i.fa
-							float right
+					li
+						background blue
+						a
+							padding-top 15px
+							padding-bottom 15px
+							margin auto 20px
+							color white
+							i.fa
+								float right
 					.open
 						a
 						a:hover
 						a:focus
-							background transparent
+							background blue
 						
 					.dropdown
 						.dropdown-menu

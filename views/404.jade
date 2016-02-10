@@ -1,4 +1,15 @@
 extends ./layout.jade
 
+block style
+	link(rel="stylesheet" href="/css/post.css")
+
 block content
-	h1 Page Not Found
+	.pageContent
+		#main
+			.container(ng-controller='catCtrl')
+				.row
+					h1.postTitle.text-center 404: Page not Found
+block script
+	script
+		:coffee-script
+			$('#loaderGif').fadeOut 'slow'

@@ -7,12 +7,13 @@ morgan = require 'morgan'
 app = express()
 
 app.set 'port', process.env.PORT||8000
-app.set 'views', "./views"
+#app.set 'views', "./views"
+app.set 'views', __dirname+'/../views'
 app.set 'view engine', "jade"
 
 app.use morgan 'dev'
-app.use express.static "./public"
-
+#app.use express.static "./public"
+app.use express.static __dirname+"/../public"
 
 ##API
 app.get '/', (req, res)->

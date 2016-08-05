@@ -1,3 +1,5 @@
+redirect 301 /team.htm http://pca-adj.com/team
+
 # Apache Server Configs v2.11.0 | MIT License
 # https://github.com/h5bp/server-configs-apache
 

@@ -1,4 +1,5 @@
 nav.navbar.navbar-default.navbar-fixed-top {
+  z-index: 9000;
   background: #fff;
   position: absolute;
   top: 0px;
@@ -54,8 +55,11 @@ nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a:focus {
     margin-bottom: 0px;
     background: #2c64b2;
   }
+  nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav li {
+    background: #2c64b2;
+  }
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav li a {
-    margin: auto 10%;
+    margin: auto 20px;
     color: #fff;
   }
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav li a i.fa {
@@ -64,7 +68,7 @@ nav.navbar.navbar-default.navbar-fixed-top #navMain .navbar-nav li a:focus {
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a,
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a:hover,
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .open a:focus {
-    background: transparent;
+    background: #2c64b2;
   }
   nav.navbar.navbar-default.navbar-fixed-top #navMain #mobileNavbar .navbar-nav .dropdown .dropdown-menu {
     padding: 0px;
@@ -204,7 +208,7 @@ footer .siteBy {
   margin: 20px auto 20px;
 }
 footer .siteBy img {
-  width: 200px;
+  width: 170px;
   height: auto;
 }
 @media only screen and (max-width: 769px) {
@@ -288,7 +292,7 @@ html body #loaderGif {
   width: 100%;
   height: 100%;
   z-index: 9999;
-  background: url("/img/balls.svg") 50% 50% no-repeat #f9f9f9;
+  background: url("/img/ring-alt.gif") 50% 50% no-repeat #f9f9f9;
 }
 html body a {
   text-decoration: none;
@@ -344,9 +348,22 @@ html body #main .office .row .officeLocation {
   color: #2c64b2;
   border-bottom: 1px solid #2c64b2;
 }
-html body #main .office .row .name {
+html body #main .office .row .member .pic {
+  width: 272px;
+  height: 272px;
+}
+html body #main .office .row .member .name {
+  padding-top: 15px;
+  display: block;
+  margin: auto;
+  width: 272px;
+  height: 40px;
   font-weight: 700;
   font-size: 18px;
+}
+html body #main .office .row .member .name .pres {
+  font-size: 12px;
+  color: #3f3f3f;
 }
 @media only screen and (max-width: 769px) {
   html body #featureImg {

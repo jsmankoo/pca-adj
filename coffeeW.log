@@ -1,5 +1,5 @@
 
-> pca2015@1.0.0 CCoffeeW /home/jsmankoo/Projects/PCA2015
+> pca2015@1.0.0 CCoffeeW /home/jsmankoo/Projects/pca-adj
 > coffee -c -o ./dist/index.js -w ./src/index.coffee
 
-12:50:45 PM - compiled /home/jsmankoo/Projects/PCA2015/src/index.coffee
+ENOTDIR: not a directory, open '/home/jsmankoo/Projects/pca-adj/dist/index.js/index.js'

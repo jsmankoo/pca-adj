@@ -5,12 +5,19 @@
 
 html body
 	color black
-	#slideShow
+	debug()
+	#jumboTron
 		//Very important
 		z-index -1
-		.item
-			overflow hidden
-			display block
+		display: block
+		background-image: url('/img/homepage-jumbotron.jpg')
+		background-size: cover
+		background-position: center
+		+below(767px)
+			margin-top 90px
+			size 100% 420px
+		+above(768px)
+			size 100% 820px
 	#headings
 		size 100% auto
 		color white
@@ -34,13 +41,13 @@ html body
 			&:focus
 				background-color blue
 				color white
-				
+
 	#amLogo
 		img
 			display block
 			margin -80px auto auto
 			size 161px 161px
-	
+
 	#midHeading
 		h1
 			font-weight: 700
@@ -100,8 +107,8 @@ html body
 					display none
 				.onHover
 					display table-cell
-			
-			
+
+
 		button
 			background transparent
 			display block
@@ -114,12 +121,6 @@ html body
 				color black
 
 	+below(769px)
-		#slideShow
-			margin-top 90px
-			.item
-				size 100% 420px
-				img
-					size auto 420px
 		#headings
 			absolute top 250px
 			font-weight: 700
@@ -169,7 +170,7 @@ html body
 				size 297px 297px
 				background-color rgba(44,100,178, 0.7)
 				margin 0px auto 20px
-				img 
+				img
 					size 297px 297px
 				h2
 					display none
@@ -181,7 +182,7 @@ html body
 					font-size 16px
 					padding 0px 20px
 					display table-cell
-				
+
 			button
 				margin-top 15px
 				margin-bottom 47px

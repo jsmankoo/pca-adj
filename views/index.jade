@@ -7,36 +7,36 @@ block style
 
 block content
 	.pageContent(ng-app='pcaApp' ng-controller='ctrl')
-		.owl-carousel.owl-theme#slideShow
-			//slide Show goes here
+		#jumboTron
 		#headings
 			.container
 				.row: .col-md-12
-					h1.heading.text-center {{json.acf.headline}}<i id='tm' class="fa fa-trademark"></i>
+					h1.heading.text-center Adjusting to Meet Your Needs<i id='tm' class="fa fa-trademark"></i>
 
 		#amLogo
-			img(ng-src="{{json.acf.headImage}}")
+			img(src='/img/am-best-logo-retina.png')
 		#midHeading
-			#content(ng-bind-html='htmlContent')
+			#content
+				h1 PCA Adjusters is Rated and Accepted by the A.M.BEST DIRECTORY of Recommended Insurance Attorneys &amp; Adjusters
 			a#more(href='http://www.ambest.com/home/default.aspx' target="_blank") MORE
 		#midSection
 			.container
 				.row
 					.col-md-4
 						.thumbnail
-							a(href='/team'): img#image(ng-src='{{json.acf.imageLeft}}')
-							a(href='/team'): h2.heading.text-center {{json.acf.titleLeft}}
-							p.text-center.paragraph {{json.acf.paragraphLeft}}
+							a(href='/team'): img#image(src='/img/pca-team.png')
+							a(href='/team'): h2.heading.text-center OUR TEAM
+							p.text-center.paragraph Meet PCA’s senior claims team who collectively drive the commitment, quality of work and service that our clients require.
 					.col-md-4
 						.thumbnail
-							a(href='/locations'): img#image(ng-src='{{json.acf.imageMid}}')
-							a(href='/locations'): h2.heading.text-center {{json.acf.titleMid}}
-							p.text-center.paragraph {{json.acf.paragraphMid}}
+							a(href='/locations'): img#image(src='/img/pca-news-events.png')
+							a(href='/locations'): h2.heading.text-center OUR LOCATIONS
+							p.text-center.paragraph With our Head Office in the Canada's Capital, we are complimented with two additional fully staffed branch offices in the cities of Kingston & Belleville.
 					.col-md-4
 						.thumbnail
-							a(href='https://w5.pca-adj.com' target="_blank"): img#image(ng-src='{{json.acf.imageRight}}')
-							a(href='https://w5.pca-adj.com' target="_blank"): h2.heading.text-center {{json.acf.titleRight}}
-							p.text-center.paragraph {{json.acf.paragraphRight}}
+							a(href='https://w5.pca-adj.com' target="_blank"): img#image(src='/img/pca-login.png')
+							a(href='https://w5.pca-adj.com' target="_blank"): h2.heading.text-center CLIENT PORTAL
+							p.text-center.paragraph PCA clients – login to review files on a case-by-case basis.
 		#services(ng-controller='servicesCtrl')
 			.container
 				.row
@@ -89,7 +89,7 @@ block script
 						$scope.afterCollapse = $scope.allServices[3..]
 						$('#loaderGif').fadeOut 'slow'
 
-			##load slideShow
+			###load slideShow
 			$.get 'http://pcaadj.uptowncreativeinc.com/wp-json/wp/v2/slideshow', (json)->
 				slideShow = $('#slideShow')
 				images = (img.acf.image for img in json)
@@ -153,3 +153,4 @@ block script
 						"width": "800px"
 						"margin": "0px 0px 0px #{(wid - 800)/2}px"
 					}
+			###
